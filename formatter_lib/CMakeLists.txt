@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.4)
+# set(CMAKE_MAKE_PROGRAM usr/bin/cmake)
+# set(CMAKE_C_COMPILER gcc)
+# set(CMAKE_CXX_COMPILER g++)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+project(formatter)
+add_library(formatter STATIC formatter.h formatter.cpp)
