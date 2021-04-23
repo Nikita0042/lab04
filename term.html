@@ -1,0 +1,2457 @@
+<pre><font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~</b></font>$ cd Nikita0042
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042</b></font>$ cd workspace
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ cd scripts
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/scripts</b></font>$ ls
+activate  exports
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/scripts</b></font>$ source activate
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/scripts</b></font>$ source exports
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/scripts</b></font>$ cd ..
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ curl -sSL https://get.rvm.io
+
+Команда «curl» не найдена, но может быть установлена с помощью:
+
+sudo apt install curl
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ /curl -sSL https://get.rvm.io
+bash: /curl: Нет такого файла или каталога
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ sudo apt install curl
+[sudo] пароль для nikita: 
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Следующие НОВЫЕ пакеты будут установлены:
+  curl
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 49 пакетов не обновлено.
+Необходимо скачать 161 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 411 kB.
+Игн:1 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.4
+Ошб:1 http://security.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.4
+  404  Not Found [IP: 213.180.204.183 80]
+<font color="#CC0000"><b>E: </b></font>Не удалось получить http://security.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.4_amd64.deb  404  Not Found [IP: 213.180.204.183 80]
+<font color="#CC0000"><b>E: </b></font>Не удалось получить некоторые архивы; возможно, нужно запустить apt-get update или попытаться повторить запуск с ключом --fix-missing?
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ apt-get update
+Чтение списков пакетов… Готово
+E: Не удалось открыть файл блокировки /var/lib/apt/lists/lock - open (13: Отказано в доступе)
+E: Невозможно заблокировать каталог /var/lib/apt/lists/
+W: Проблема при удалении файла /var/cache/apt/pkgcache.bin - RemoveCaches (13: Отказано в доступе)
+W: Проблема при удалении файла /var/cache/apt/srcpkgcache.bin - RemoveCaches (13: Отказано в доступе)
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ apt-get update --fix-missing
+Чтение списков пакетов… Готово
+E: Не удалось открыть файл блокировки /var/lib/apt/lists/lock - open (13: Отказано в доступе)
+E: Невозможно заблокировать каталог /var/lib/apt/lists/
+W: Проблема при удалении файла /var/cache/apt/pkgcache.bin - RemoveCaches (13: Отказано в доступе)
+W: Проблема при удалении файла /var/cache/apt/srcpkgcache.bin - RemoveCaches (13: Отказано в доступе)
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ sudo apt install curl --fix-missing
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Следующие НОВЫЕ пакеты будут установлены:
+  curl
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 49 пакетов не обновлено.
+Необходимо скачать 161 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 411 kB.
+Игн:1 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.4
+Ошб:1 http://security.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.4
+  404  Not Found [IP: 213.180.204.183 80]
+<font color="#CC0000"><b>E: </b></font>Не удалось получить http://security.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.4_amd64.deb  404  Not Found [IP: 213.180.204.183 80]
+<font color="#CC0000"><b>E: </b></font>Internal Error, ordering was unable to handle the media swap
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ sudo apt install curl
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Следующие НОВЫЕ пакеты будут установлены:
+  curl
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 49 пакетов не обновлено.
+Необходимо скачать 161 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 411 kB.
+Игн:1 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.4
+Ошб:1 http://security.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.4
+  404  Not Found [IP: 213.180.204.183 80]
+<font color="#CC0000"><b>E: </b></font>Не удалось получить http://security.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.4_amd64.deb  404  Not Found [IP: 213.180.204.183 80]
+<font color="#CC0000"><b>E: </b></font>Не удалось получить некоторые архивы; возможно, нужно запустить apt-get update или попытаться повторить запуск с ключом --fix-missing?
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ sudo gem install curl
+Fetching awesome_print-1.9.2.gem
+Fetching unidecoder-1.1.2.gem
+Fetching curl-0.0.9.gem
+Successfully installed unidecoder-1.1.2
+Successfully installed awesome_print-1.9.2
+Successfully installed curl-0.0.9
+Parsing documentation for unidecoder-1.1.2
+Installing ri documentation for unidecoder-1.1.2
+Parsing documentation for awesome_print-1.9.2
+Installing ri documentation for awesome_print-1.9.2
+Parsing documentation for curl-0.0.9
+Installing ri documentation for curl-0.0.9
+Done installing documentation for unidecoder, awesome_print, curl after 0 seconds
+3 gems installed
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ curl -sSL https://get.rvm.io
+
+Команда «curl» не найдена, но может быть установлена с помощью:
+
+sudo apt install curl
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ /curl -sSL https://get.rvm.io
+bash: /curl: Нет такого файла или каталога
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ gem install curl
+Fetching curl-0.0.9.gem
+ERROR:  While executing gem ... (Gem::FilePermissionError)
+    You don&apos;t have write permissions for the /var/lib/gems/2.7.0 directory.
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ sudo gem install curl
+Successfully installed curl-0.0.9
+Parsing documentation for curl-0.0.9
+Done installing documentation for curl after 0 seconds
+1 gem installed
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ curl -sSL https://get.rvm.io
+
+Команда «curl» не найдена, но может быть установлена с помощью:
+
+sudo apt install curl
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ /curl -sSL https://get.rvm.io
+bash: /curl: Нет такого файла или каталога
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu focal InRelease
+Пол:2 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Пол:3 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]     
+Пол:4 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]<font color="#C4A000">  </font>
+Пол:5 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [943 kB]
+Пол:6 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [619 kB]
+Пол:7 http://ru.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [459 kB]
+Пол:8 http://ru.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [216 kB]
+Пол:9 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [265 kB]
+Пол:10 http://ru.archive.ubuntu.com/ubuntu focal-updates/main DEP-11 48x48 Icons [55,6 kB]
+Пол:11 http://ru.archive.ubuntu.com/ubuntu focal-updates/main DEP-11 64x64 Icons [87,9 kB]
+Пол:12 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [13,1 kB]
+Пол:13 http://ru.archive.ubuntu.com/ubuntu focal-updates/restricted i386 Packages [16,2 kB]
+Пол:14 http://ru.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [204 kB]
+Пол:15 http://ru.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [30,4 kB]
+Пол:16 http://ru.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [440 B]
+Пол:17 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [759 kB]
+Пол:18 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [562 kB]
+Пол:19 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [162 kB]
+Пол:20 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [303 kB]
+Пол:21 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe DEP-11 48x48 Icons [200 kB]
+Пол:22 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe DEP-11 64x64 Icons [356 kB]
+Пол:23 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [17,0 kB]
+Пол:24 http://ru.archive.ubuntu.com/ubuntu focal-updates/multiverse i386 Packages [6 132 B]
+Пол:25 http://ru.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [21,6 kB]
+Пол:26 http://ru.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [2 468 B]
+Пол:27 http://ru.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [600 B]
+Пол:28 http://ru.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [1 768 B]
+Пол:29 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [219 kB]
+Пол:30 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [126 kB]
+Пол:31 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [24,3 kB]
+Пол:32 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [7 436 B]
+Пол:33 http://security.ubuntu.com/ubuntu focal-security/restricted i386 Packages [14,9 kB]
+Пол:34 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [181 kB]
+Пол:35 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [26,8 kB]
+Пол:36 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [396 B]
+Пол:37 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [436 kB]
+Пол:38 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [551 kB]
+Пол:39 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [82,1 kB]
+Пол:40 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [58,2 kB]
+Пол:41 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [10,7 kB]
+Пол:42 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [14,8 kB]
+Пол:43 http://security.ubuntu.com/ubuntu focal-security/multiverse i386 Packages [2 536 B]
+Пол:44 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [340 B]
+Получено 7 381 kB за 4с (1 773 kB/s)<font color="#C4A000">                               </font>
+
+^C
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ sudo apt install curl
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Будут установлены следующие дополнительные пакеты:
+  libcurl4
+Следующие НОВЫЕ пакеты будут установлены:
+  curl
+Следующие пакеты будут обновлены:
+  libcurl4
+Обновлено 1 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 114 пакетов не обновлено.
+Необходимо скачать 395 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 411 kB.
+Хотите продолжить? [Д/н] y
+Пол:1 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl4 amd64 7.68.0-1ubuntu2.5 [234 kB]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.5 [161 kB]
+Получено 395 kB за 0с (1 358 kB/s)
+(Чтение базы данных … на данный момент установлено 198236 файлов и каталогов.)
+Подготовка к распаковке …/libcurl4_7.68.0-1ubuntu2.5_amd64.deb …
+Распаковывается libcurl4:amd64 (7.68.0-1ubuntu2.5) на замену (7.68.0-1ubuntu2.4
+) …
+Выбор ранее не выбранного пакета curl.
+Подготовка к распаковке …/curl_7.68.0-1ubuntu2.5_amd64.deb …
+Распаковывается curl (7.68.0-1ubuntu2.5) …
+Настраивается пакет libcurl4:amd64 (7.68.0-1ubuntu2.5) …
+Настраивается пакет curl (7.68.0-1ubuntu2.5) …
+Обрабатываются триггеры для man-db (2.9.1-1) …
+Обрабатываются триггеры для libc-bin (2.31-0ubuntu9.2) …
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ clear --help
+clear: invalid option -- &apos;-&apos;
+Usage: clear [options]
+
+Options:
+  -T TERM     use this instead of $TERM
+  -V          print curses-version
+  -x          do not try to clear scrollback
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ 
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ hgfhghgf
+hgfhghgf: команда не найдена
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ curl -sSL https://get.rvm.io
+#!/usr/bin/env bash
+
+shopt -s extglob
+set -o errtrace
+set -o errexit
+set -o pipefail
+
+rvm_install_initialize()
+{
+  DEFAULT_SOURCES=(github.com/rvm/rvm bitbucket.org/mpapis/rvm)
+
+  BASH_MIN_VERSION=&quot;3.2.25&quot;
+  if
+    [[ -n &quot;${BASH_VERSION:-}&quot; &amp;&amp;
+      &quot;$(\printf &quot;%b&quot; &quot;${BASH_VERSION:-}\n${BASH_MIN_VERSION}\n&quot; | LC_ALL=C \sort -t&quot;.&quot; -k1,1n -k2,2n -k3,3n | \head -n1)&quot; != &quot;${BASH_MIN_VERSION}&quot;
+    ]]
+  then
+    echo &quot;BASH ${BASH_MIN_VERSION} required (you have $BASH_VERSION)&quot;
+    exit 1
+  fi
+
+  export HOME PS4
+  export rvm_trace_flag rvm_debug_flag rvm_user_install_flag rvm_ignore_rvmrc rvm_prefix rvm_path
+
+  PS4=&quot;+ \${BASH_SOURCE##\${rvm_path:-}} : \${FUNCNAME[0]:+\${FUNCNAME[0]}()}  \${LINENO} &gt; &quot;
+}
+
+log()  { printf &quot;%b\n&quot; &quot;$*&quot;; }
+debug(){ [[ ${rvm_debug_flag:-0} -eq 0 ]] || printf &quot;%b\n&quot; &quot;$*&quot; &gt;&amp;2; }
+warn() { log &quot;WARN: $*&quot; &gt;&amp;2 ; }
+fail() { fail_with_code 1 &quot;$*&quot; ; }
+fail_with_code() { code=&quot;$1&quot; ; shift ; log &quot;\nERROR: $*\n&quot; &gt;&amp;2 ; exit &quot;$code&quot; ; }
+
+rvm_install_commands_setup()
+{
+  \which which &gt;/dev/null 2&gt;&amp;1 || fail &quot;Could not find &apos;which&apos; command, make sure it&apos;s available first before continuing installation.&quot;
+  \which grep &gt;/dev/null 2&gt;&amp;1 || fail &quot;Could not find &apos;grep&apos; command, make sure it&apos;s available first before continuing installation.&quot;
+  if
+    [[ -z &quot;${rvm_tar_command:-}&quot; ]] &amp;&amp; builtin command -v gtar &gt;/dev/null
+  then
+    rvm_tar_command=gtar
+  elif
+    ${rvm_tar_command:-tar} --help 2&gt;&amp;1 | GREP_OPTIONS=&quot;&quot; \grep -- --strip-components &gt;/dev/null
+  then
+    rvm_tar_command=&quot;${rvm_tar_command:-tar}&quot;
+  else
+    case &quot;$(uname)&quot; in
+      (OpenBSD)
+        log &quot;Trying to install GNU version of tar, might require sudo password&quot;
+        if (( UID ))
+        then sudo pkg_add -z gtar-1
+        else pkg_add -z gtar-1
+        fi
+        rvm_tar_command=gtar
+        ;;
+      (Darwin|FreeBSD|DragonFly) # it&apos;s not possible to autodetect on OSX, the help/man does not mention all flags
+        rvm_tar_command=tar
+        ;;
+      (SunOS)
+        case &quot;$(uname -r)&quot; in
+          (5.10)
+            log &quot;Trying to install GNU version of tar, might require sudo password&quot;
+            if (( UID ))
+            then
+              if \which sudo &gt;/dev/null 2&gt;&amp;1
+              then sudo_10=sudo
+              elif \which /opt/csw/bin/sudo &gt;/dev/null 2&gt;&amp;1
+              then sudo_10=/opt/csw/bin/sudo
+              else fail &quot;sudo is required but not found. You may install sudo from OpenCSW repository (https://www.opencsw.org/about)&quot;
+              fi
+              pkginfo -q CSWpkgutil || $sudo_10 pkgadd -a $rvm_path/config/solaris/noask -d https://get.opencsw.org/now CSWpkgutil
+              sudo /opt/csw/bin/pkgutil -iy CSWgtar -t https://mirror.opencsw.org/opencsw/unstable
+            else
+              pkginfo -q CSWpkgutil || pkgadd -a $rvm_path/config/solaris/noask -d https://get.opencsw.org/now CSWpkgutil
+              /opt/csw/bin/pkgutil -iy CSWgtar -t https://mirror.opencsw.org/opencsw/unstable
+            fi
+            rvm_tar_command=/opt/csw/bin/gtar
+            ;;
+          (*)
+            rvm_tar_command=tar
+            ;;
+        esac
+    esac
+    builtin command -v ${rvm_tar_command:-gtar} &gt;/dev/null ||
+    fail &quot;Could not find GNU compatible version of &apos;tar&apos; command, make sure it&apos;s available first before continuing installation.&quot;
+  fi
+  if
+    [[ &quot; ${rvm_tar_options:-} &quot; != *&quot; --no-same-owner &quot;*  ]] &amp;&amp;
+    $rvm_tar_command --help 2&gt;&amp;1 | GREP_OPTIONS=&quot;&quot; \grep -- --no-same-owner &gt;/dev/null
+  then
+    rvm_tar_options=&quot;${rvm_tar_options:-}${rvm_tar_options:+ }--no-same-owner&quot;
+  fi
+}
+
+usage()
+{
+  printf &quot;%b&quot; &quot;
+
+Usage
+
+  rvm-installer [options] [action]
+
+Options
+
+  [[--]version] &lt;version&gt;
+
+    The version or tag to install. Valid values are:
+
+      latest         - The latest tagged version.
+      latest-minor   - The latest minor version of the current major version.
+      latest-&lt;x&gt;     - The latest minor version of version x.
+      latest-&lt;x&gt;.&lt;y&gt; - The latest patch version of version x.y.
+      &lt;x&gt;.&lt;y&gt;.&lt;z&gt;    - Major version x, minor version y and patch z.
+
+  [--]branch &lt;branch&gt;
+
+    The name of the branch from which RVM is installed. This option can be used
+    with the following formats for &lt;branch&gt;:
+
+      &lt;account&gt;/
+
+        If account is rvm or mpapis, installs from one of the following:
+
+          https://github.com/rvm/rvm/archive/master.tar.gz
+          https://bitbucket.org/mpapis/rvm/get/master.tar.gz
+
+       Otherwise, installs from:
+
+         https://github.com/&lt;account&gt;/rvm/archive/master.tar.gz
+
+      &lt;account&gt;/&lt;branch&gt;
+
+        If account is rvm or mpapis, installs from one of the following:
+
+          https://github.com/rvm/rvm/archive/&lt;branch&gt;.tar.gz
+          https://bitbucket.org/mpapis/rvm/get/&lt;branch&gt;.tar.gz
+
+        Otherwise, installs from:
+
+          https://github.com/&lt;account&gt;/rvm/archive/&lt;branch&gt;.tar.gz
+
+      [/]&lt;branch&gt;
+
+        Installs the branch from one of the following:
+
+          https://github.com/rvm/rvm/archive/&lt;branch&gt;.tar.gz
+          https://bitbucket.org/mpapis/rvm/get/&lt;branch&gt;.tar.gz
+
+      [--]source &lt;source&gt;
+
+        Defines the repository from which RVM is retrieved and installed in the format:
+
+          &lt;domain&gt;/&lt;account&gt;/&lt;repo&gt;
+
+        Where:
+
+          &lt;domain&gt;  - Is bitbucket.org, github.com or a github enterprise site serving
+                      an RVM repository.
+          &lt;account&gt; - Is the user account in which the RVM repository resides.
+          &lt;repo&gt;    - Is the name of the RVM repository.
+
+        Note that when using the [--]source option, one should only use the [/]branch format
+        with the [--]branch option. Failure to do so will result in undefined behavior.
+
+      --trace
+
+        Provides debug logging for the installation script.
+Actions
+
+  master - Installs RVM from the master branch at rvm/rvm on github or mpapis/rvm
+           on bitbucket.org.
+  stable - Installs RVM from the stable branch a rvm/rvm on github or mpapis/rvm
+           on bitbucket.org.
+  help   - Displays this output.
+
+&quot;
+}
+
+## duplication marker 32fosjfjsznkjneuera48jae
+__rvm_curl_output_control()
+{
+  if
+    (( ${rvm_quiet_curl_flag:-0} == 1 ))
+  then
+    __flags+=( &quot;--silent&quot; &quot;--show-error&quot; )
+  elif
+    [[ &quot; $*&quot; == *&quot; -s&quot;* || &quot; $*&quot; == *&quot; --silent&quot;* ]]
+  then
+    # make sure --show-error is used with --silent
+    [[ &quot; $*&quot; == *&quot; -S&quot;* || &quot; $*&quot; == *&quot; -sS&quot;* || &quot; $*&quot; == *&quot; --show-error&quot;* ]] ||
+    {
+      __flags+=( &quot;--show-error&quot; )
+    }
+  fi
+}
+
+## duplication marker 32fosjfjsznkjneuera48jae
+# -S is automatically added to -s
+__rvm_curl()
+(
+  __rvm_which curl &gt;/dev/null ||
+  {
+    rvm_error &quot;RVM requires &apos;curl&apos;. Install &apos;curl&apos; first and try again.&quot;
+    return 200
+  }
+
+  typeset -a __flags
+  __flags=( --fail --location --max-redirs 10 )
+
+  [[ &quot;$*&quot; == *&quot;--max-time&quot;* ]] ||
+  [[ &quot;$*&quot; == *&quot;--connect-timeout&quot;* ]] ||
+    __flags+=( --connect-timeout 30 --retry-delay 2 --retry 3 )
+
+  if [[ -n &quot;${rvm_proxy:-}&quot; ]]
+  then __flags+=( --proxy &quot;${rvm_proxy:-}&quot; )
+  fi
+
+  __rvm_curl_output_control
+
+  unset curl
+  __rvm_debug_command \curl &quot;${__flags[@]}&quot; &quot;$@&quot; || return $?
+)
+
+rvm_error()  { printf &quot;ERROR: %b\n&quot; &quot;$*&quot;; }
+__rvm_which(){   which &quot;$@&quot; || return $?; true; }
+__rvm_debug_command()
+{
+  debug &quot;Running($#): $*&quot;
+  &quot;$@&quot; || return $?
+  true
+}
+rvm_is_a_shell_function()
+{
+  [[ -t 0 &amp;&amp; -t 1 ]] || return $?
+  return ${rvm_is_not_a_shell_function:-0}
+}
+
+# Searches the tags for the highest available version matching a given pattern.
+# fetch_version (github.com/rvm/rvm bitbucket.org/mpapis/rvm) 1.10. -&gt; 1.10.3
+# fetch_version (github.com/rvm/rvm bitbucket.org/mpapis/rvm) 1.10. -&gt; 1.10.3
+# fetch_version (github.com/rvm/rvm bitbucket.org/mpapis/rvm) 1.    -&gt; 1.11.0
+# fetch_version (github.com/rvm/rvm bitbucket.org/mpapis/rvm) &quot;&quot;    -&gt; 2.0.1
+fetch_version()
+{
+  typeset _account _domain _pattern _repo _sources _values _version
+  _sources=(${!1})
+  _pattern=$2
+  for _source in &quot;${_sources[@]}&quot;
+  do
+    IFS=&apos;/&apos; read -r _domain _account _repo &lt;&lt;&lt; &quot;${_source}&quot;
+    _version=&quot;$(
+      fetch_versions ${_domain} ${_account} ${_repo} |
+      GREP_OPTIONS=&quot;&quot; \grep &quot;^${_pattern:-}&quot; | tail -n 1
+    )&quot;
+    if
+      [[ -n ${_version} ]]
+    then
+      echo &quot;${_version}&quot;
+      return 0
+    fi
+  done
+  fail_with_code 4 &quot;Exhausted all sources trying to fetch version &apos;$version&apos; of RVM!&quot;
+}
+
+# Returns a sorted list of most recent tags from a repository
+fetch_versions()
+{
+  typeset _account _domain _repo _url
+  _domain=$1
+  _account=$2
+  _repo=$3
+  case ${_domain} in
+    (bitbucket.org)
+      _url=&quot;https://api.${_domain}/2.0/repositories/${_account}/${_repo}/refs/tags?sort=-name&amp;pagelen=20&quot;
+      ;;
+    (github.com)
+      _url=https://api.${_domain}/repos/${_account}/${_repo}/tags
+      ;;
+
+    (*)
+      _url=https://${_domain}/api/v3/repos/${_account}/${_repo}/tags
+      ;;
+  esac
+
+  { __rvm_curl -sS &quot;${_url}&quot; || warn &quot;...the preceeding error with code $? occurred while fetching $_url&quot; ; } |
+    \awk -v RS=&apos;,|values&quot;:&apos; -v FS=&apos;&quot;&apos; &apos;$2==&quot;name&quot;&amp;&amp;$4!=&quot;rvm&quot;{print $4}&apos; |
+    sort -t. -k 1,1n -k 2,2n -k 3,3n -k 4,4n -k 5,5n
+}
+
+install_release()
+{
+  typeset _source _sources _url _version _verify_pgp
+  _sources=(${!1})
+  _version=$2
+  debug &quot;Downloading RVM version ${_version}&quot;
+  for _source in &quot;${_sources[@]}&quot;
+  do
+    case ${_source} in
+      (bitbucket.org*)
+        _url=&quot;https://${_source}/get/${_version}.tar.gz&quot;
+        _verify_pgp=&quot;https://${_source}/downloads/${_version}.tar.gz.asc&quot;
+        ;;
+      (*)
+        _url=&quot;https://${_source}/archive/${_version}.tar.gz&quot;
+        _verify_pgp=&quot;https://${_source}/releases/download/${_version}/${_version}.tar.gz.asc&quot;
+        ;;
+    esac
+    get_and_unpack &quot;${_url}&quot; &quot;rvm-${_version}.tgz&quot; &quot;$_verify_pgp&quot; &amp;&amp; return
+  done
+  return $?
+}
+
+install_head()
+{
+  typeset _branch _source _sources _url
+  _sources=(${!1})
+  _branch=$2
+  debug &quot;Selected RVM branch ${_branch}&quot;
+  for _source in &quot;${_sources[@]}&quot;
+  do
+    case ${_source} in
+      (bitbucket.org*)
+        _url=https://${_source}/get/${_branch}.tar.gz
+        ;;
+      (*)
+        _url=https://${_source}/archive/${_branch}.tar.gz
+        ;;
+    esac
+    get_and_unpack &quot;${_url}&quot; &quot;rvm-${_branch//\//_}.tgz&quot; &amp;&amp; return
+  done
+  return $?
+}
+
+# duplication marker dfkjdjngdfjngjcszncv
+# Drop in cd which _doesn&apos;t_ respect cdpath
+__rvm_cd()
+{
+  typeset old_cdpath ret
+  ret=0
+  old_cdpath=&quot;${CDPATH}&quot;
+  CDPATH=&quot;.&quot;
+  chpwd_functions=&quot;&quot; builtin cd &quot;$@&quot; || ret=$?
+  CDPATH=&quot;${old_cdpath}&quot;
+  return $ret
+}
+
+get_package()
+{
+  typeset _url _file
+  _url=&quot;$1&quot;
+  _file=&quot;$2&quot;
+  log &quot;Downloading ${_url}&quot;
+  __rvm_curl -sS ${_url} &gt; ${rvm_archives_path}/${_file} ||
+  {
+    _return=$?
+    case $_return in
+      # duplication marker lfdgzkngdkjvnfjknkjvcnbjkncvjxbn
+      (60)
+        log &quot;
+Could not download &apos;${_url}&apos;, you can read more about it here:
+https://rvm.io/support/fixing-broken-ssl-certificates/
+To continue in insecure mode run &apos;echo insecure &gt;&gt; ~/.curlrc&apos;.
+&quot;
+        ;;
+      # duplication marker lfdgzkngdkjvnfjknkjvcnbjkncvjxbn
+      (77)
+        log &quot;
+It looks like you have old certificates, you can read more about it here:
+https://rvm.io/support/fixing-broken-ssl-certificates/
+&quot;
+        ;;
+      # duplication marker lfdgzkngdkjvnfjknkjvcnbjkncvjxbn
+      (141)
+        log &quot;
+Curl returned 141 - it is result of a segfault which means it&apos;s Curls fault.
+Try again and if it crashes more than a couple of times you either need to
+reinstall Curl or consult with your distribution manual and contact support.
+&quot;
+        ;;
+      (*)
+        log &quot;
+Could not download &apos;${_url}&apos;.
+  curl returned status &apos;$_return&apos;.
+&quot;
+        ;;
+    esac
+    return $_return
+  }
+}
+
+# duplication marker flnglfdjkngjndkfjhsbdjgfghdsgfklgg
+rvm_install_gpg_setup()
+{
+  export rvm_gpg_command
+  {
+    rvm_gpg_command=&quot;$( \which gpg2 2&gt;/dev/null )&quot; &amp;&amp;
+    [[ ${rvm_gpg_command} != &quot;/cygdrive/&quot;* ]]
+  } || {
+    rvm_gpg_command=&quot;$( \which gpg 2&gt;/dev/null )&quot; &amp;&amp;
+    [[ ${rvm_gpg_command} != &quot;/cygdrive/&quot;* ]]
+  } || rvm_gpg_command=&quot;&quot;
+
+  debug &quot;Detected GPG program: &apos;$rvm_gpg_command&apos;&quot;
+
+  [[ -n &quot;$rvm_gpg_command&quot; ]] || return $?
+}
+
+# duplication marker rdjgndfnghdfnhgfdhbghdbfhgbfdhbn
+verify_package_pgp()
+{
+  if
+    &quot;${rvm_gpg_command}&quot; --verify &quot;$2&quot; &quot;$1&quot;
+  then
+    log &quot;GPG verified &apos;$1&apos;&quot;
+  else
+    typeset _return=$?
+
+    log &quot;\
+GPG signature verification failed for &apos;$1&apos; - &apos;$3&apos;! Try to install GPG v2 and then fetch the public key:
+
+    ${SUDO_USER:+sudo }${rvm_gpg_command##*/} --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+or if it fails:
+
+    command curl -sSL https://rvm.io/mpapis.asc | ${SUDO_USER:+sudo }${rvm_gpg_command##*/} --import -
+    command curl -sSL https://rvm.io/pkuczynski.asc | ${SUDO_USER:+sudo }${rvm_gpg_command##*/} --import -
+
+In case of further problems with validation please refer to https://rvm.io/rvm/security
+&quot;
+
+    exit ${_return}
+  fi
+}
+
+verify_pgp()
+{
+  [[ -n &quot;${1:-}&quot; ]] ||
+  {
+    debug &quot;No PGP url given, skipping.&quot;
+    return 0
+  }
+
+  get_package &quot;$1&quot; &quot;$2.asc&quot; ||
+  {
+    debug &quot;PGP url given but does not exist: &apos;$1&apos;&quot;
+    return 0
+  }
+
+  rvm_install_gpg_setup ||
+  {
+    log &quot;Found PGP signature at: &apos;$1&apos;,
+but no GPG software exists to validate it, skipping.&quot;
+    return 0
+  }
+
+  verify_package_pgp &quot;${rvm_archives_path}/$2&quot; &quot;${rvm_archives_path}/$2.asc&quot; &quot;$1&quot;
+}
+
+get_and_unpack()
+{
+  typeset _url _file _patern _return _verify_pgp
+  _url=&quot;$1&quot;
+  _file=&quot;$2&quot;
+  _verify_pgp=&quot;$3&quot;
+
+  get_package &quot;$_url&quot; &quot;$_file&quot; || return $?
+  verify_pgp &quot;$_verify_pgp&quot; &quot;$_file&quot; || return $?
+
+  [[ -d &quot;${rvm_src_path}/rvm&quot; ]] || \mkdir -p &quot;${rvm_src_path}/rvm&quot;
+  __rvm_cd &quot;${rvm_src_path}/rvm&quot; ||
+  {
+    _return=$?
+    log &quot;Could not change directory &apos;${rvm_src_path}/rvm&apos;.&quot;
+    return $_return
+  }
+
+  # Remove existing installation
+  typeset _cleanup_cmd
+  _cleanup_cmd=&quot;rm -rf ${rvm_src_path}/rvm/{,.[!.],..?}*&quot;
+
+  $_cleanup_cmd || {
+    _return=$?
+      log &quot;Could not remove old RVM sources. Try:\n\n\tsudo $_cleanup_cmd\n\nThen retry your task again.&quot;
+      return $_return
+  }
+
+  # Unpack sources
+  __rvm_debug_command $rvm_tar_command xzf ${rvm_archives_path}/${_file} ${rvm_tar_options:-} --strip-components 1 ||
+  {
+    _return=$?
+    log &quot;Could not extract RVM sources.&quot;
+    return $_return
+  }
+}
+
+rvm_install_default_settings()
+{
+  # Tracing, if asked for.
+  if
+    [[ &quot;$*&quot; == *--trace* ]] || (( ${rvm_trace_flag:-0} &gt; 0 ))
+  then
+    set -o xtrace
+    rvm_trace_flag=1
+  fi
+
+  # Variable initialization, remove trailing slashes if they exist on HOME
+  true \
+    ${rvm_trace_flag:=0} ${rvm_debug_flag:=0}\
+    ${rvm_ignore_rvmrc:=0} HOME=&quot;${HOME%%+(\/)}&quot;
+
+  if
+    (( rvm_ignore_rvmrc == 0 ))
+  then
+    for rvmrc in /etc/rvmrc &quot;$HOME/.rvmrc&quot;
+    do
+      if
+        [[ -s &quot;$rvmrc&quot; ]]
+      then
+        if
+          GREP_OPTIONS=&quot;&quot; \grep &apos;^\s*rvm .*$&apos; &quot;$rvmrc&quot; &gt;/dev/null 2&gt;&amp;1
+        then
+          printf &quot;%b&quot; &quot;
+  Error: $rvmrc is for rvm settings only.
+  rvm CLI may NOT be called from within $rvmrc.
+  Skipping the loading of $rvmrc
+  &quot;
+          exit 1
+        else
+          source &quot;$rvmrc&quot;
+        fi
+      fi
+    done
+  fi
+
+  if
+    [[ -z &quot;${rvm_path:-}&quot; ]]
+  then
+    if
+      (( UID == 0 ))
+    then
+      rvm_user_install_flag=0
+      rvm_prefix=&quot;/usr/local&quot;
+      rvm_path=&quot;${rvm_prefix}/rvm&quot;
+    else
+      rvm_user_install_flag=1
+      rvm_prefix=&quot;$HOME&quot;
+      rvm_path=&quot;${rvm_prefix}/.rvm&quot;
+    fi
+  fi
+  if [[ -z &quot;${rvm_prefix}&quot; ]]
+  then rvm_prefix=$( dirname $rvm_path )
+  fi
+
+  # duplication marker kkdfkgnjfndgjkndfjkgnkfjdgn
+  [[ -n &quot;${rvm_user_install_flag:-}&quot; ]] ||
+  case &quot;$rvm_path&quot; in
+    (/usr/local/rvm)         rvm_user_install_flag=0 ;;
+    ($HOME/*|/${USER// /_}*) rvm_user_install_flag=1 ;;
+    (*)                      rvm_user_install_flag=0 ;;
+  esac
+}
+
+rvm_install_parse_params()
+{
+  install_rubies=()
+  install_gems=()
+  flags=( ./scripts/install )
+  forwarded_flags=()
+  while
+    (( $# &gt; 0 ))
+  do
+    token=&quot;$1&quot;
+    shift
+    case &quot;$token&quot; in
+
+      (--trace)
+        set -o xtrace
+        rvm_trace_flag=1
+        flags=( -x &quot;${flags[@]}&quot; &quot;$token&quot; )
+        forwarded_flags+=( &quot;$token&quot; )
+        ;;
+
+      (--debug|--quiet-curl)
+        flags+=( &quot;$token&quot; )
+        forwarded_flags+=( &quot;$token&quot; )
+        token=${token#--}
+        token=${token//-/_}
+        export &quot;rvm_${token}_flag&quot;=1
+        printf &quot;%b&quot; &quot;Turning on ${token/_/ } mode.\n&quot;
+        ;;
+
+      (--path)
+        if [[ -n &quot;${1:-}&quot; ]]
+        then
+          rvm_path=&quot;$1&quot;
+          shift
+        else
+          fail &quot;--path must be followed by a path.&quot;
+        fi
+        ;;
+
+      (--branch|branch) # Install RVM from a given branch
+        if [[ -n &quot;${1:-}&quot; ]]
+        then
+          case &quot;$1&quot; in
+            (/*)
+              branch=${1#/}
+              ;;
+            (*/)
+              branch=master
+              if [[ &quot;${1%/}&quot; -ne rvm ]] &amp;&amp; [[ &quot;${1%/}&quot; -ne mpapis ]]
+              then sources=(github.com/${1%/}/rvm)
+              fi
+              ;;
+            (*/*)
+              branch=${1#*/}
+              if [[ &quot;${1%%/*}&quot; -ne rvm ]] &amp;&amp; [[ &quot;${1%%/*}&quot; -ne mpapis ]]
+              then sources=(github.com/${1%%/*}/rvm)
+              fi
+              ;;
+            (*)
+              branch=&quot;$1&quot;
+              ;;
+          esac
+          shift
+        else
+          fail &quot;--branch must be followed by a branchname.&quot;
+        fi
+        ;;
+
+      (--source|source)
+        if [[ -n &quot;${1:-}&quot; ]]
+        then
+          if [[ &quot;$1&quot; = */*/* ]]
+          then
+            sources=($1)
+            shift
+          else
+            fail &quot;--source must be in the format &lt;domain&gt;/&lt;account&gt;/&lt;repo&gt;.&quot;
+          fi
+        else
+          fail &quot;--source must be followed by a source.&quot;
+        fi
+        ;;
+
+      (--user-install|--ignore-dotfiles)
+        token=${token#--}
+        token=${token//-/_}
+        export &quot;rvm_${token}_flag&quot;=1
+        printf &quot;%b&quot; &quot;Turning on ${token/_/ } mode.\n&quot;
+        ;;
+
+      (--auto-dotfiles)
+        flags+=( &quot;$token&quot; )
+        export &quot;rvm_auto_dotfiles_flag&quot;=1
+        printf &quot;%b&quot; &quot;Turning on auto dotfiles mode.\n&quot;
+        ;;
+
+      (--auto)
+        export &quot;rvm_auto_dotfiles_flag&quot;=1
+        printf &quot;%b&quot; &quot;Warning, --auto is deprecated in favor of --auto-dotfiles.\n&quot;
+        ;;
+
+      (--verify-downloads)
+        if [[ -n &quot;${1:-}&quot; ]]
+        then
+          export rvm_verify_downloads_flag=&quot;$1&quot;
+          forwarded_flags+=( &quot;$token&quot; &quot;$1&quot; )
+          shift
+        else
+          fail &quot;--verify-downloads must be followed by level(0|1|2).&quot;
+        fi
+        ;;
+
+      (--autolibs=*)
+        flags+=( &quot;$token&quot; )
+        export rvm_autolibs_flag=&quot;${token#--autolibs=}&quot;
+        forwarded_flags+=( &quot;$token&quot; )
+        ;;
+
+      (--without-gems=*|--with-gems=*|--with-default-gems=*)
+        flags+=( &quot;$token&quot; )
+        value=&quot;${token#*=}&quot;
+        token=&quot;${token%%=*}&quot;
+        token=&quot;${token#--}&quot;
+        token=&quot;${token//-/_}&quot;
+        export &quot;rvm_${token}&quot;=&quot;${value}&quot;
+        printf &quot;%b&quot; &quot;Installing RVM ${token/_/ }: ${value}.\n&quot;
+        ;;
+
+      (--version|version)
+        version=&quot;$1&quot;
+        shift
+        ;;
+
+      (head|master)
+        version=&quot;head&quot;
+        branch=&quot;master&quot;
+        ;;
+
+      (stable)
+        version=&quot;latest&quot;
+        ;;
+
+      (latest|latest-*|+([[:digit:]]).+([[:digit:]]).+([[:digit:]]))
+        version=&quot;$token&quot;
+        ;;
+
+      (--ruby)
+        install_rubies+=( ruby )
+        ;;
+
+      (--ruby=*)
+        token=${token#--ruby=}
+        install_rubies+=( ${token//,/ } )
+        ;;
+
+      (--rails)
+        install_gems+=( rails )
+        ;;
+
+      (--gems=*)
+        token=${token#--gems=}
+        install_gems+=( ${token//,/ } )
+        ;;
+
+      (--add-to-rvm-group)
+        export rvm_add_users_to_rvm_group=&quot;$1&quot;
+        shift
+        ;;
+
+      (help)
+        usage
+        exit 0
+        ;;
+
+      (*)
+        usage
+        exit 1
+        ;;
+
+    esac
+  done
+
+  if (( ${#install_gems[@]} &gt; 0 &amp;&amp; ${#install_rubies[@]} == 0 ))
+  then install_rubies=( ruby )
+  fi
+
+  true &quot;${version:=head}&quot;
+  true &quot;${branch:=master}&quot;
+
+  if [[ -z &quot;${sources[@]}&quot; ]]
+  then sources=(&quot;${DEFAULT_SOURCES[@]}&quot;)
+  fi
+
+  rvm_src_path=&quot;$rvm_path/src&quot;
+  rvm_archives_path=&quot;$rvm_path/archives&quot;
+  rvm_releases_url=&quot;https://rvm.io/releases&quot;
+}
+
+rvm_install_validate_rvm_path()
+{
+  case &quot;$rvm_path&quot; in
+    (*[[:space:]]*)
+      printf &quot;%b&quot; &quot;
+It looks you are one of the happy *space* users (in home dir name),
+RVM is not yet fully ready for it, use this trick to fix it:
+
+    sudo mkdir -p /${USER// /_}.rvm
+    sudo chown -R \&quot;$USER:\&quot; /${USER// /_}.rvm
+    echo \&quot;export rvm_path=/${USER// /_}.rvm\&quot; &gt;&gt; \&quot;$HOME/.rvmrc\&quot;
+
+and start installing again.
+
+&quot;
+      exit 2
+    ;;
+    (/usr/share/ruby-rvm)
+      printf &quot;%b&quot; &quot;
+It looks you are one of the happy Ubuntu users,
+RVM packaged by Ubuntu is old and broken,
+follow this link for details how to fix:
+
+  https://stackoverflow.com/a/9056395/497756
+
+&quot;
+      [[ &quot;${rvm_uses_broken_ubuntu_path:-no}&quot; == &quot;yes&quot; ]] || exit 3
+    ;;
+  esac
+
+  if [[ &quot;$rvm_path&quot; != &quot;/&quot;* ]]
+  then fail &quot;The rvm install path must be fully qualified. Tried $rvm_path&quot;
+  fi
+}
+
+rvm_install_validate_volume_mount_mode()
+{
+  \typeset path partition test_exec
+
+  path=$rvm_path
+
+  # Directory $rvm_path might not exists at this point so we need to traverse the tree upwards
+  while [[ -n &quot;$path&quot; ]]
+  do
+      if [[ -d $path ]]
+      then
+        partition=`df -P $path | awk &apos;END{print $1}&apos;`
+
+        test_exec=$(mktemp $path/rvm-exec-test.XXXXXX)
+        echo &apos;#!/bin/sh&apos; &gt; &quot;$test_exec&quot;
+        chmod +x &quot;$test_exec&quot;
+
+        if ! &quot;$test_exec&quot;
+        then
+          rm -f &quot;$test_exec&quot;
+          printf &quot;%b&quot; &quot;
+It looks that scripts located in ${path}, which would be RVM destination ${rvm_path},
+are not executable. One of the reasons might be that partition ${partition} holding this location
+is mounted in *noexec* mode, which prevents RVM from working correctly. Please verify your setup
+and re-mount partition ${partition} without the noexec option.&quot;
+          exit 2
+        fi
+
+        rm -f &quot;$test_exec&quot;
+        break
+      fi
+
+      path=${path%/*}
+  done
+}
+
+rvm_install_select_and_get_version()
+{
+  typeset dir _version_release _version
+
+  for dir in &quot;$rvm_src_path&quot; &quot;$rvm_archives_path&quot;
+  do
+    [[ -d &quot;$dir&quot; ]] || mkdir -p &quot;$dir&quot;
+  done
+
+  _version_release=&quot;${version}&quot;
+  case &quot;${version}&quot; in
+    (head)
+      _version_release=&quot;${branch}&quot;
+      install_head sources[@] ${branch:-master}
+      ;;
+
+    (latest)
+      _version=$(fetch_version sources[@])
+      install_release sources[@] &quot;$_version&quot;
+      ;;
+
+    (latest-minor)
+      version=&quot;$(&lt;&quot;$rvm_path/VERSION&quot;)&quot;
+      _version=$(fetch_version sources[@] ${version%.*})
+      install_release sources[@] &quot;$_version&quot;
+      ;;
+
+    (latest-*)
+      _version=$(fetch_version sources[@] ${version#latest-})
+      install_release sources[@] &quot;$_version&quot;
+      ;;
+
+    (+([[:digit:]]).+([[:digit:]]).+([[:digit:]])) # x.y.z
+      install_release sources[@] ${version}
+      ;;
+
+    (*)
+      fail &quot;Something went wrong, unrecognized version &apos;$version&apos;&quot;
+      ;;
+  esac
+  echo &quot;${_version_release}&quot; &gt; &quot;$rvm_path/RELEASE&quot;
+}
+
+rvm_install_main()
+{
+  [[ -f ./scripts/install ]] ||
+  {
+    log &quot;&apos;./scripts/install&apos; can not be found for installation, something went wrong, it usually means your &apos;tar&apos; is broken, please report it here: https://github.com/rvm/rvm/issues&quot;
+    return 127
+  }
+
+  # required flag - path to install
+  flags+=( --path &quot;$rvm_path&quot; )
+  \command bash &quot;${flags[@]}&quot;
+}
+
+rvm_install_ruby_and_gems()
+(
+  if
+    (( ${#install_rubies[@]} &gt; 0 ))
+  then
+    source ${rvm_scripts_path:-${rvm_path}/scripts}/rvm
+    source ${rvm_scripts_path:-${rvm_path}/scripts}/functions/version
+    __rvm_print_headline
+
+    for _ruby in ${install_rubies[@]}
+    do command rvm &quot;${forwarded_flags[@]}&quot; install ${_ruby}
+    done
+    # set the first one as default, skip rest
+    for _ruby in ${install_rubies[@]}
+    do
+      rvm &quot;${forwarded_flags[@]}&quot; alias create default ${_ruby}
+      break
+    done
+
+    for _gem in ${install_gems[@]}
+    do rvm &quot;${forwarded_flags[@]}&quot; all do gem install ${_gem}
+    done
+
+    printf &quot;%b&quot; &quot;
+  * To start using RVM you need to run \`source $rvm_path/scripts/rvm\`
+    in all your open shell windows, in rare cases you need to reopen all shell windows.
+&quot;
+
+    if
+      [[ &quot;${install_gems[*]}&quot; == *&quot;rails&quot;* ]]
+    then
+      printf &quot;%b&quot; &quot;
+  * To start using rails you need to run \`rails new &lt;project_dir&gt;\`.
+&quot;
+    fi
+  fi
+)
+
+rvm_install()
+{
+  rvm_install_initialize
+  rvm_install_commands_setup
+  rvm_install_default_settings
+  rvm_install_parse_params &quot;$@&quot;
+  rvm_install_validate_rvm_path
+  rvm_install_validate_volume_mount_mode
+  rvm_install_select_and_get_version
+  rvm_install_main
+  rvm_install_ruby_and_gems
+}
+
+rvm_install &quot;$@&quot;
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ \curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles
+Turning on ignore dotfiles mode.
+Downloading https://github.com/rvm/rvm/archive/master.tar.gz
+<font color="#4E9A06">Installing RVM to /home/nikita/.rvm/</font>
+Installation of RVM in /home/nikita/.rvm/ is almost complete:
+
+  * To start using RVM you need to run `source /home/nikita/.rvm/scripts/rvm`
+    in all your open shell windows, in rare cases you need to reopen all shell windows.
+<font color="#C4A000">Thanks for installing RVM 🙏</font>
+Please consider donating to our open collective to help us maintain RVM.
+
+👉  Donate: <font color="#3465A4">https://opencollective.com/rvm/donate</font>
+
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ echo &quot;source $HOME/.rvm/scripts/rvm&quot; &gt;&gt; scripts/activate
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ . scripts/activate
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ source scripts
+bash: source: scripts: это каталог
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ source scripts/activate
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ rvm autolibs disable
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ rvm install ruby-2.4.2
+Searching for binary rubies, this might take some time.
+Found remote file https://rvm_io.global.ssl.fastly.net/binaries/ubuntu/20.04/x86_64/ruby-2.4.2.tar.bz2
+ruby-2.4.2 - #configure
+ruby-2.4.2 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 18.7M  100 18.7M    0     0  2436k      0  0:00:07  0:00:07 --:--:-- 4920k
+ruby-2.4.2 - #validate archive
+ruby-2.4.2 - #extract
+ruby-2.4.2 - #validate binary
+ruby-2.4.2 - #setup
+ruby-2.4.2 - #gemset created /home/nikita/.rvm/gems/ruby-2.4.2@global
+<font color="#4E9A06">ruby-2.4.2 - #importing gemset /home/nikita/.rvm/gemsets/global.gems</font>...........
+<font color="#4E9A06">ruby-2.4.2 - #generating global wrappers</font>........
+ruby-2.4.2 - #gemset created /home/nikita/.rvm/gems/ruby-2.4.2
+ruby-2.4.2 - #importing gemsetfile /home/nikita/.rvm/gemsets/default.gems evaluated to empty gem list
+<font color="#4E9A06">ruby-2.4.2 - #generating default wrappers</font>........
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ rvm use 2.4.2 --default
+Using /home/nikita/.rvm/gems/ruby-2.4.2
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ gem install travis
+Fetching ruby2_keywords-0.0.4.gem
+Fetching i18n-1.8.10.gem
+Fetching faraday-1.3.0.gem
+Fetching multipart-post-2.1.1.gem
+Fetching faraday_middleware-1.0.0.gem
+Fetching highline-2.0.3.gem
+Fetching concurrent-ruby-1.1.8.gem
+Fetching faraday-net_http-1.0.1.gem
+Fetching public_suffix-4.0.6.gem
+Fetching net-http-persistent-2.9.4.gem
+Fetching tzinfo-1.2.9.gem
+Fetching thread_safe-0.3.6.gem
+Fetching activesupport-5.2.5.gem
+Fetching multi_json-1.15.0.gem
+Fetching addressable-2.7.0.gem
+Fetching net-http-pipeline-1.0.1.gem
+Fetching json_pure-2.5.1.gem
+Fetching pusher-client-0.6.2.gem
+Fetching gh-0.18.0.gem
+Fetching travis-1.10.0.gem
+Fetching websocket-1.2.9.gem
+Fetching launchy-2.4.3.gem
+Successfully installed faraday-net_http-1.0.1
+Successfully installed multipart-post-2.1.1
+Successfully installed ruby2_keywords-0.0.4
+Successfully installed faraday-1.3.0
+Successfully installed faraday_middleware-1.0.0
+Successfully installed highline-2.0.3
+Successfully installed concurrent-ruby-1.1.8
+Successfully installed i18n-1.8.10
+Successfully installed thread_safe-0.3.6
+Successfully installed tzinfo-1.2.9
+Successfully installed activesupport-5.2.5
+Successfully installed multi_json-1.15.0
+Successfully installed public_suffix-4.0.6
+Successfully installed addressable-2.7.0
+Successfully installed net-http-persistent-2.9.4
+Successfully installed net-http-pipeline-1.0.1
+Successfully installed gh-0.18.0
+Successfully installed launchy-2.4.3
+Successfully installed json_pure-2.5.1
+Successfully installed websocket-1.2.9
+Successfully installed pusher-client-0.6.2
+Successfully installed travis-1.10.0
+Parsing documentation for faraday-net_http-1.0.1
+Installing ri documentation for faraday-net_http-1.0.1
+Parsing documentation for multipart-post-2.1.1
+Installing ri documentation for multipart-post-2.1.1
+Parsing documentation for ruby2_keywords-0.0.4
+Installing ri documentation for ruby2_keywords-0.0.4
+Parsing documentation for faraday-1.3.0
+Installing ri documentation for faraday-1.3.0
+Parsing documentation for faraday_middleware-1.0.0
+Installing ri documentation for faraday_middleware-1.0.0
+Parsing documentation for highline-2.0.3
+Installing ri documentation for highline-2.0.3
+Parsing documentation for concurrent-ruby-1.1.8
+Installing ri documentation for concurrent-ruby-1.1.8
+Parsing documentation for i18n-1.8.10
+Installing ri documentation for i18n-1.8.10
+Parsing documentation for thread_safe-0.3.6
+Installing ri documentation for thread_safe-0.3.6
+Parsing documentation for tzinfo-1.2.9
+Installing ri documentation for tzinfo-1.2.9
+Parsing documentation for activesupport-5.2.5
+Installing ri documentation for activesupport-5.2.5
+Parsing documentation for multi_json-1.15.0
+Installing ri documentation for multi_json-1.15.0
+Parsing documentation for public_suffix-4.0.6
+Installing ri documentation for public_suffix-4.0.6
+Parsing documentation for addressable-2.7.0
+Installing ri documentation for addressable-2.7.0
+Parsing documentation for net-http-persistent-2.9.4
+Installing ri documentation for net-http-persistent-2.9.4
+Parsing documentation for net-http-pipeline-1.0.1
+Installing ri documentation for net-http-pipeline-1.0.1
+Parsing documentation for gh-0.18.0
+Installing ri documentation for gh-0.18.0
+Parsing documentation for launchy-2.4.3
+Installing ri documentation for launchy-2.4.3
+Parsing documentation for json_pure-2.5.1
+Installing ri documentation for json_pure-2.5.1
+Parsing documentation for websocket-1.2.9
+Installing ri documentation for websocket-1.2.9
+Parsing documentation for pusher-client-0.6.2
+Installing ri documentation for pusher-client-0.6.2
+Parsing documentation for travis-1.10.0
+Installing ri documentation for travis-1.10.0
+Done installing documentation for faraday-net_http, multipart-post, ruby2_keywords, faraday, faraday_middleware, highline, concurrent-ruby, i18n, thread_safe, tzinfo, activesupport, multi_json, public_suffix, addressable, net-http-persistent, net-http-pipeline, gh, launchy, json_pure, websocket, pusher-client, travis after 33 seconds
+22 gems installed
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ git clone https://github.com/${GITHUB_USERNAME}/lab03 projects/lab04
+Клонирование в «projects/lab04»…
+Username for &apos;https://github.com&apos;: Nikita0042
+Password for &apos;https://Nikita0042@github.com&apos;: 
+remote: Repository not found.
+fatal: repository &apos;https://github.com/Nikita0042/lab03/&apos; not found
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ cd projects
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects</b></font>$ cd lab03
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab03</b></font>$ git init
+Переинициализирован существующий репозиторий Git в /home/nikita/Nikita0042/workspace/projects/lab03/.git/
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab03</b></font>$ git status
+На ветке master
+Ваша ветка обновлена в соответствии с «origin/master».
+
+Изменения, которые не в индексе для коммита:
+  (используйте «git add &lt;файл&gt;…», чтобы добавить файл в индекс)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+	<font color="#CC0000">изменено:      solver_lib/solver.cpp</font>
+
+Неотслеживаемые файлы:
+  (используйте «git add &lt;файл&gt;…», чтобы добавить в то, что будет включено в коммит)
+	<font color="#CC0000">CMakeCache.txt</font>
+	<font color="#CC0000">CMakeFiles/</font>
+	<font color="#CC0000">REPORT.md</font>
+	<font color="#CC0000">REPORT0.md</font>
+	<font color="#CC0000">_build/</font>
+	<font color="#CC0000">formatter_ex_lib/CMakeLists.txt</font>
+	<font color="#CC0000">formatter_ex_lib/_build/</font>
+	<font color="#CC0000">formatter_lib/CMakeLists.txt</font>
+	<font color="#CC0000">formatter_lib/_build/</font>
+	<font color="#CC0000">hello_world_application/CMakeLists.txt</font>
+	<font color="#CC0000">hello_world_application/_build/</font>
+	<font color="#CC0000">report.html</font>
+	<font color="#CC0000">report.txt</font>
+	<font color="#CC0000">solver_application/CMakeLists.txt</font>
+	<font color="#CC0000">solver_application/_build/</font>
+	<font color="#CC0000">solver_lib/CMakeLists.txt</font>
+	<font color="#CC0000">solver_lib/_build/</font>
+	<font color="#CC0000">test.md</font>
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab03</b></font>$ git add .
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab03</b></font>$ git commit -m&quot;create rep&quot;
+[master c2809b7] create rep
+ 168 files changed, 20315 insertions(+), 3 deletions(-)
+ create mode 100644 CMakeCache.txt
+ create mode 100644 CMakeFiles/3.20.1/CMakeCCompiler.cmake
+ create mode 100644 CMakeFiles/3.20.1/CMakeCXXCompiler.cmake
+ create mode 100755 CMakeFiles/3.20.1/CMakeDetermineCompilerABI_C.bin
+ create mode 100755 CMakeFiles/3.20.1/CMakeDetermineCompilerABI_CXX.bin
+ create mode 100644 CMakeFiles/3.20.1/CMakeSystem.cmake
+ create mode 100644 CMakeFiles/3.20.1/CompilerIdC/CMakeCCompilerId.c
+ create mode 100755 CMakeFiles/3.20.1/CompilerIdC/a.out
+ create mode 100644 CMakeFiles/3.20.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
+ create mode 100755 CMakeFiles/3.20.1/CompilerIdCXX/a.out
+ create mode 100644 CMakeFiles/CMakeOutput.log
+ create mode 100644 CMakeFiles/cmake.check_cache
+ create mode 100644 REPORT.md
+ create mode 100644 REPORT0.md
+ create mode 100644 _build/CMakeCache.txt
+ create mode 100644 _build/CMakeFiles/3.20.1/CMakeCCompiler.cmake
+ create mode 100644 _build/CMakeFiles/3.20.1/CMakeCXXCompiler.cmake
+ create mode 100755 _build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_C.bin
+ create mode 100755 _build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_CXX.bin
+ create mode 100644 _build/CMakeFiles/3.20.1/CMakeSystem.cmake
+ create mode 100644 _build/CMakeFiles/3.20.1/CompilerIdC/CMakeCCompilerId.c
+ create mode 100755 _build/CMakeFiles/3.20.1/CompilerIdC/a.out
+ create mode 100644 _build/CMakeFiles/3.20.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
+ create mode 100755 _build/CMakeFiles/3.20.1/CompilerIdCXX/a.out
+ create mode 100644 _build/CMakeFiles/CMakeOutput.log
+ create mode 100644 _build/CMakeFiles/cmake.check_cache
+ create mode 100644 formatter_ex_lib/CMakeLists.txt
+ create mode 100644 formatter_ex_lib/_build/CMakeFiles/CMakeDirectoryInformation.cmake
+ create mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/DependInfo.cmake
+ create mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/build.make
+ create mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/cmake_clean.cmake
+ create mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/cmake_clean_target.cmake
+ create mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/compiler_depend.internal
+ create mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/compiler_depend.make
+ create mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/compiler_depend.ts
+ create mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/depend.make
+ create mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/flags.make
+ create mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/formatter_ex.cpp.o
+ create mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/formatter_ex.cpp.o.d
+ create mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/link.txt
+ create mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/progress.make
+ create mode 100644 formatter_ex_lib/_build/CMakeFiles/progress.marks
+ create mode 100644 formatter_ex_lib/_build/Makefile
+ create mode 100644 formatter_ex_lib/_build/cmake_install.cmake
+ create mode 100644 formatter_ex_lib/_build/libformatter_ex.a
+ create mode 100644 formatter_lib/CMakeLists.txt
+ create mode 100644 formatter_lib/_build/CMakeFiles/CMakeDirectoryInformation.cmake
+ create mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/DependInfo.cmake
+ create mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/build.make
+ create mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/cmake_clean.cmake
+ create mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/cmake_clean_target.cmake
+ create mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/compiler_depend.internal
+ create mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/compiler_depend.make
+ create mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/compiler_depend.ts
+ create mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/depend.make
+ create mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/flags.make
+ create mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/formatter.cpp.o
+ create mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/formatter.cpp.o.d
+ create mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/link.txt
+ create mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/progress.make
+ create mode 100644 formatter_lib/_build/CMakeFiles/progress.marks
+ create mode 100644 formatter_lib/_build/Makefile
+ create mode 100644 formatter_lib/_build/cmake_install.cmake
+ create mode 100644 formatter_lib/_build/libformatter.a
+ create mode 100644 hello_world_application/CMakeLists.txt
+ create mode 100644 hello_world_application/_build/CMakeCache.txt
+ create mode 100644 hello_world_application/_build/CMakeFiles/3.20.1/CMakeCCompiler.cmake
+ create mode 100644 hello_world_application/_build/CMakeFiles/3.20.1/CMakeCXXCompiler.cmake
+ create mode 100755 hello_world_application/_build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_C.bin
+ create mode 100755 hello_world_application/_build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_CXX.bin
+ create mode 100644 hello_world_application/_build/CMakeFiles/3.20.1/CMakeSystem.cmake
+ create mode 100644 hello_world_application/_build/CMakeFiles/3.20.1/CompilerIdC/CMakeCCompilerId.c
+ create mode 100755 hello_world_application/_build/CMakeFiles/3.20.1/CompilerIdC/a.out
+ create mode 100644 hello_world_application/_build/CMakeFiles/3.20.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
+ create mode 100755 hello_world_application/_build/CMakeFiles/3.20.1/CompilerIdCXX/a.out
+ create mode 100644 hello_world_application/_build/CMakeFiles/CMakeDirectoryInformation.cmake
+ create mode 100644 hello_world_application/_build/CMakeFiles/CMakeOutput.log
+ create mode 100644 hello_world_application/_build/CMakeFiles/Makefile.cmake
+ create mode 100644 hello_world_application/_build/CMakeFiles/Makefile2
+ create mode 100644 hello_world_application/_build/CMakeFiles/TargetDirectories.txt
+ create mode 100644 hello_world_application/_build/CMakeFiles/cmake.check_cache
+ create mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/DependInfo.cmake
+ create mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/build.make
+ create mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/cmake_clean.cmake
+ create mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/compiler_depend.internal
+ create mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/compiler_depend.make
+ create mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/compiler_depend.ts
+ create mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/depend.make
+ create mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/flags.make
+ create mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/hello_world.cpp.o
+ create mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/hello_world.cpp.o.d
+ create mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/link.txt
+ create mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/progress.make
+ create mode 100644 hello_world_application/_build/CMakeFiles/progress.marks
+ create mode 100644 hello_world_application/_build/Makefile
+ create mode 100644 hello_world_application/_build/cmake_install.cmake
+ create mode 100755 hello_world_application/_build/hello_world
+ create mode 100644 report.html
+ create mode 100644 report.txt
+ create mode 100644 solver_application/CMakeLists.txt
+ create mode 100644 solver_application/_build/CMakeCache.txt
+ create mode 100644 solver_application/_build/CMakeFiles/3.20.1/CMakeCCompiler.cmake
+ create mode 100644 solver_application/_build/CMakeFiles/3.20.1/CMakeCXXCompiler.cmake
+ create mode 100755 solver_application/_build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_C.bin
+ create mode 100755 solver_application/_build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_CXX.bin
+ create mode 100644 solver_application/_build/CMakeFiles/3.20.1/CMakeSystem.cmake
+ create mode 100644 solver_application/_build/CMakeFiles/3.20.1/CompilerIdC/CMakeCCompilerId.c
+ create mode 100755 solver_application/_build/CMakeFiles/3.20.1/CompilerIdC/a.out
+ create mode 100644 solver_application/_build/CMakeFiles/3.20.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
+ create mode 100755 solver_application/_build/CMakeFiles/3.20.1/CompilerIdCXX/a.out
+ create mode 100644 solver_application/_build/CMakeFiles/CMakeDirectoryInformation.cmake
+ create mode 100644 solver_application/_build/CMakeFiles/CMakeOutput.log
+ create mode 100644 solver_application/_build/CMakeFiles/Makefile.cmake
+ create mode 100644 solver_application/_build/CMakeFiles/Makefile2
+ create mode 100644 solver_application/_build/CMakeFiles/TargetDirectories.txt
+ create mode 100644 solver_application/_build/CMakeFiles/cmake.check_cache
+ create mode 100644 solver_application/_build/CMakeFiles/progress.marks
+ create mode 100644 solver_application/_build/CMakeFiles/solver.dir/DependInfo.cmake
+ create mode 100644 solver_application/_build/CMakeFiles/solver.dir/build.make
+ create mode 100644 solver_application/_build/CMakeFiles/solver.dir/cmake_clean.cmake
+ create mode 100644 solver_application/_build/CMakeFiles/solver.dir/compiler_depend.internal
+ create mode 100644 solver_application/_build/CMakeFiles/solver.dir/compiler_depend.make
+ create mode 100644 solver_application/_build/CMakeFiles/solver.dir/compiler_depend.ts
+ create mode 100644 solver_application/_build/CMakeFiles/solver.dir/depend.make
+ create mode 100644 solver_application/_build/CMakeFiles/solver.dir/equation.cpp.o
+ create mode 100644 solver_application/_build/CMakeFiles/solver.dir/equation.cpp.o.d
+ create mode 100644 solver_application/_build/CMakeFiles/solver.dir/flags.make
+ create mode 100644 solver_application/_build/CMakeFiles/solver.dir/link.txt
+ create mode 100644 solver_application/_build/CMakeFiles/solver.dir/progress.make
+ create mode 100644 solver_application/_build/Makefile
+ create mode 100644 solver_application/_build/cmake_install.cmake
+ create mode 100755 solver_application/_build/solver
+ create mode 100644 solver_lib/CMakeLists.txt
+ create mode 100644 solver_lib/_build/CMakeCache.txt
+ create mode 100644 solver_lib/_build/CMakeFiles/3.20.1/CMakeCCompiler.cmake
+ create mode 100644 solver_lib/_build/CMakeFiles/3.20.1/CMakeCXXCompiler.cmake
+ create mode 100755 solver_lib/_build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_C.bin
+ create mode 100755 solver_lib/_build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_CXX.bin
+ create mode 100644 solver_lib/_build/CMakeFiles/3.20.1/CMakeSystem.cmake
+ create mode 100644 solver_lib/_build/CMakeFiles/3.20.1/CompilerIdC/CMakeCCompilerId.c
+ create mode 100755 solver_lib/_build/CMakeFiles/3.20.1/CompilerIdC/a.out
+ create mode 100644 solver_lib/_build/CMakeFiles/3.20.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
+ create mode 100755 solver_lib/_build/CMakeFiles/3.20.1/CompilerIdCXX/a.out
+ create mode 100644 solver_lib/_build/CMakeFiles/CMakeDirectoryInformation.cmake
+ create mode 100644 solver_lib/_build/CMakeFiles/CMakeOutput.log
+ create mode 100644 solver_lib/_build/CMakeFiles/Makefile.cmake
+ create mode 100644 solver_lib/_build/CMakeFiles/Makefile2
+ create mode 100644 solver_lib/_build/CMakeFiles/TargetDirectories.txt
+ create mode 100644 solver_lib/_build/CMakeFiles/cmake.check_cache
+ create mode 100644 solver_lib/_build/CMakeFiles/progress.marks
+ create mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/DependInfo.cmake
+ create mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/build.make
+ create mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/cmake_clean.cmake
+ create mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/cmake_clean_target.cmake
+ create mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/compiler_depend.internal
+ create mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/compiler_depend.make
+ create mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/compiler_depend.ts
+ create mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/depend.make
+ create mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/flags.make
+ create mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/link.txt
+ create mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/progress.make
+ create mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/solver.cpp.o
+ create mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/solver.cpp.o.d
+ create mode 100644 solver_lib/_build/Makefile
+ create mode 100644 solver_lib/_build/cmake_install.cmake
+ create mode 100644 solver_lib/_build/libsolver_lib.a
+ create mode 100644 test.md
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab03</b></font>$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab03
+fatal: внешний репозиторий origin уже существует
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab03</b></font>$ git remote add origin
+использование: git remote add [&lt;опции&gt;] &lt;имя&gt; &lt;url&gt;
+
+    -f, --fetch           извлечь внешние ветки
+    --tags                импортировать все метки и ассоциированные объекты при извлечении
+                          или не извлекать метки вообще (--no-tags)
+    -t, --track &lt;ветка&gt;   отслеживаемые ветки
+    -m, --master &lt;ветка&gt;  мастер ветка
+    --mirror[=(push|fetch)]
+                          настроить внешний репозиторий как зеркало для отправки или извлечения изменений
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab03</b></font>$ git remote
+origin
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab03</b></font>$ git remote origin
+error: Неизвестная подкоманда: origin
+использование: git remote [-v | --verbose]
+   или: git remote add [-t &lt;ветка&gt;] [-m &lt;мастер-ветка&gt;] [-f] [--tags | --no-tags] [--mirror=&lt;fetch|push&gt;] &lt;имя&gt; &lt;адрес&gt;
+   или: git remote rename &lt;старое-название&gt; &lt;новое-название&gt;
+   или: git remote remove &lt;имя&gt;
+   или: git remote set-head &lt;имя&gt; (-a | --auto | -d | --delete | &lt;ветка&gt;)
+   или: git remote [-v | --verbose] show [-n] &lt;имя&gt;
+   или: git remote prune [-n | --dry-run] &lt;имя&gt;
+   или: git remote [-v | --verbose] update [-p | --prune] [(&lt;группа&gt; | &lt;имя-внешнего-репозитория&gt;)…]
+   или: git remote set-branches [--add] &lt;имя&gt; &lt;ветка&gt;…
+   или: git remote get-url [--push] [--all] &lt;имя&gt;
+   или: git remote set-url [--push] &lt;имя&gt; &lt;новый-url&gt; [&lt;старый-url&gt;]
+   или: git remote set-url --add &lt;имя&gt; &lt;новый-url&gt;
+   или: git remote set-url --delete &lt;имя&gt; &lt;url&gt;
+
+    -v, --verbose         быть многословнее; должно стоять перед подкомандой
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab03</b></font>$ git remote get-url origin
+https://github.com/tp-labs/lab03
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab03</b></font>$ git remote remove origin
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab03</b></font>$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab03
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab03</b></font>$ git push origin main
+error: src refspec main does not match any
+<font color="#CC0000">error: не удалось отправить некоторые ссылки в «https://github.com/Nikita0042/lab03»</font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab03</b></font>$ git push origin master
+Username for &apos;https://github.com&apos;: Nikita0042
+Password for &apos;https://Nikita0042@github.com&apos;: 
+Перечисление объектов: 243, готово.
+Подсчет объектов: 100% (243/243), готово.
+Сжатие объектов: 100% (229/229), готово.
+Запись объектов: 100% (243/243), 1.11 MiB | 295.00 KiB/s, готово.
+Всего 243 (изменения 113), повторно использовано 0 (изменения 0)
+remote: Resolving deltas: 100% (113/113), done.
+To https://github.com/Nikita0042/lab03
+ * [new branch]      master -&gt; master
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab03</b></font>$ git clone https://github.com/${GITHUB_USERNAME}/lab03 projects/lab04
+Клонирование в «projects/lab04»…
+remote: Enumerating objects: 243, done.
+remote: Counting objects: 100% (243/243), done.
+remote: Compressing objects: 100% (116/116), done.
+remote: Total 243 (delta 113), reused 243 (delta 113), pack-reused 0
+Получение объектов: 100% (243/243), 1.11 MiB | 179.00 KiB/s, готово.
+Определение изменений: 100% (113/113), готово.
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab03</b></font>$ cd ..
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects</b></font>$ cd ..
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ git clone https://github.com/${GITHUB_USERNAME}/lab03 projects/lab04
+Клонирование в «projects/lab04»…
+remote: Enumerating objects: 243, done.
+remote: Counting objects: 100% (243/243), done.
+remote: Compressing objects: 100% (116/116), done.
+remote: Total 243 (delta 113), reused 243 (delta 113), pack-reused 0
+Получение объектов: 100% (243/243), 1.11 MiB | 827.00 KiB/s, готово.
+Определение изменений: 100% (113/113), готово.
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ cd lab04
+bash: cd: lab04: Нет такого файла или каталога
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ cd projects
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects</b></font>$ cd lab04
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ git remote remove origin
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab04
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ git push origin master
+Username for &apos;https://github.com&apos;: Nikita0042
+Password for &apos;https://Nikita0042@github.com&apos;: 
+Перечисление объектов: 243, готово.
+Подсчет объектов: 100% (243/243), готово.
+Сжатие объектов: 100% (116/116), готово.
+Запись объектов: 100% (243/243), 1.11 MiB | 1.64 MiB/s, готово.
+Всего 243 (изменения 113), повторно использовано 243 (изменения 113)
+remote: Resolving deltas: 100% (113/113), done.
+To https://github.com/Nikita0042/lab04
+ * [new branch]      master -&gt; master
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ </pre>
+
+
+
+<pre><font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~</b></font>$ cd Nikita0042
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042</b></font>$ ls
+<font color="#3465A4"><b>workspace</b></font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042</b></font>$ cd workspace
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ ls
+<font color="#3465A4"><b>node</b></font>  <font color="#3465A4"><b>projects</b></font>  <font color="#3465A4"><b>reports</b></font>  <font color="#3465A4"><b>scripts</b></font>  <font color="#3465A4"><b>tasks</b></font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ cd scripts
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/scripts</b></font>$ ls
+activate  exports
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/scripts</b></font>$ source activate
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/scripts</b></font>$ source exports
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/scripts</b></font>$ exports
+
+Команда «exports» не найдена. Возможно, вы имели в виду:
+
+  command &apos;exportfs&apos; from deb nfs-kernel-server (1:1.3.4-2.5ubuntu3.3)
+
+Try: sudo apt install &lt;deb name&gt;
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/scripts</b></font>$ export
+declare -x COLORTERM=&quot;truecolor&quot;
+declare -x DBUS_SESSION_BUS_ADDRESS=&quot;unix:path=/run/user/1000/bus&quot;
+declare -x DESKTOP_SESSION=&quot;ubuntu&quot;
+declare -x DISPLAY=&quot;:0&quot;
+declare -x GDMSESSION=&quot;ubuntu&quot;
+declare -x GEM_HOME=&quot;/home/nikita/.rvm/gems/ruby-2.4.2&quot;
+declare -x GEM_PATH=&quot;/home/nikita/.rvm/gems/ruby-2.4.2:/home/nikita/.rvm/gems/ruby-2.4.2@global&quot;
+declare -x GITHUB_EMAIL=&quot;foxwrld@mail.ru&quot;
+declare -x GITHUB_TOKEN=&quot;da435ad6664d8a908c3021f1457835bc6aa7452e&quot;
+declare -x GITHUB_USERNAME=&quot;Nikita0042&quot;
+declare -x GJS_DEBUG_OUTPUT=&quot;stderr&quot;
+declare -x GJS_DEBUG_TOPICS=&quot;JS ERROR;JS LOG&quot;
+declare -x GNOME_DESKTOP_SESSION_ID=&quot;this-is-deprecated&quot;
+declare -x GNOME_SHELL_SESSION_MODE=&quot;ubuntu&quot;
+declare -x GNOME_TERMINAL_SCREEN=&quot;/org/gnome/Terminal/screen/cfc54436_f862_42c3_a29a_babe7436e4c5&quot;
+declare -x GNOME_TERMINAL_SERVICE=&quot;:1.66&quot;
+declare -x GPG_AGENT_INFO=&quot;/run/user/1000/gnupg/S.gpg-agent:0:1&quot;
+declare -x GTK_MODULES=&quot;gail:atk-bridge&quot;
+declare -x HOME=&quot;/home/nikita&quot;
+declare -x IM_CONFIG_PHASE=&quot;1&quot;
+declare -x INVOCATION_ID=&quot;80531819c96e49958ea0ff1d2f4d73ff&quot;
+declare -x IRBRC=&quot;/home/nikita/.rvm/rubies/ruby-2.4.2/.irbrc&quot;
+declare -x JOURNAL_STREAM=&quot;8:29999&quot;
+declare -x LANG=&quot;ru_RU.UTF-8&quot;
+declare -x LANGUAGE=&quot;ru:en&quot;
+declare -x LC_ADDRESS=&quot;ru_RU.UTF-8&quot;
+declare -x LC_IDENTIFICATION=&quot;ru_RU.UTF-8&quot;
+declare -x LC_MEASUREMENT=&quot;ru_RU.UTF-8&quot;
+declare -x LC_MONETARY=&quot;ru_RU.UTF-8&quot;
+declare -x LC_NAME=&quot;ru_RU.UTF-8&quot;
+declare -x LC_NUMERIC=&quot;ru_RU.UTF-8&quot;
+declare -x LC_PAPER=&quot;ru_RU.UTF-8&quot;
+declare -x LC_TELEPHONE=&quot;ru_RU.UTF-8&quot;
+declare -x LC_TIME=&quot;ru_RU.UTF-8&quot;
+declare -x LESSCLOSE=&quot;/usr/bin/lesspipe %s %s&quot;
+declare -x LESSOPEN=&quot;| /usr/bin/lesspipe %s&quot;
+declare -x LOGNAME=&quot;nikita&quot;
+declare -x LS_COLORS=&quot;rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:&quot;
+declare -x MANAGERPID=&quot;713&quot;
+declare -x MY_RUBY_HOME=&quot;/home/nikita/.rvm/rubies/ruby-2.4.2&quot;
+declare -x OLDPWD=&quot;/home/nikita/Nikita0042/workspace&quot;
+declare -x PAPERSIZE=&quot;a4&quot;
+declare -x PATH=&quot;/home/nikita/.rvm/gems/ruby-2.4.2/bin:/home/nikita/.rvm/gems/ruby-2.4.2@global/bin:/home/nikita/.rvm/rubies/ruby-2.4.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/nikita/Nikita0042/workspace/node/bin:/home/nikita/.rvm/bin&quot;
+declare -x PWD=&quot;/home/nikita/Nikita0042/workspace/scripts&quot;
+declare -x QT_ACCESSIBILITY=&quot;1&quot;
+declare -x QT_IM_MODULE=&quot;ibus&quot;
+declare -x RUBY_VERSION=&quot;ruby-2.4.2&quot;
+declare -x SESSION_MANAGER=&quot;local/nikita-VirtualBox:@/tmp/.ICE-unix/1015,unix/nikita-VirtualBox:/tmp/.ICE-unix/1015&quot;
+declare -x SHELL=&quot;/bin/bash&quot;
+declare -x SHLVL=&quot;1&quot;
+declare -x SSH_AGENT_PID=&quot;965&quot;
+declare -x SSH_AUTH_SOCK=&quot;/run/user/1000/keyring/ssh&quot;
+declare -x TERM=&quot;xterm-256color&quot;
+declare -x USER=&quot;nikita&quot;
+declare -x USERNAME=&quot;nikita&quot;
+declare -x VTE_VERSION=&quot;6003&quot;
+declare -x WINDOWPATH=&quot;2&quot;
+declare -x XAUTHORITY=&quot;/run/user/1000/gdm/Xauthority&quot;
+declare -x XDG_CONFIG_DIRS=&quot;/etc/xdg/xdg-ubuntu:/etc/xdg&quot;
+declare -x XDG_CURRENT_DESKTOP=&quot;ubuntu:GNOME&quot;
+declare -x XDG_DATA_DIRS=&quot;/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop&quot;
+declare -x XDG_MENU_PREFIX=&quot;gnome-&quot;
+declare -x XDG_RUNTIME_DIR=&quot;/run/user/1000&quot;
+declare -x XDG_SESSION_CLASS=&quot;user&quot;
+declare -x XDG_SESSION_DESKTOP=&quot;ubuntu&quot;
+declare -x XDG_SESSION_TYPE=&quot;x11&quot;
+declare -x XMODIFIERS=&quot;@im=ibus&quot;
+declare -x rvm_alias_expanded
+declare -x rvm_bin_flag
+declare -x rvm_bin_path=&quot;/home/nikita/.rvm/bin&quot;
+declare -x rvm_delete_flag
+declare -x rvm_docs_type
+declare -x rvm_file_name
+declare -x rvm_gemstone_package_file
+declare -x rvm_gemstone_url
+declare -x rvm_hook
+declare -x rvm_niceness
+declare -x rvm_nightly_flag
+declare -x rvm_only_path_flag
+declare -x rvm_path=&quot;/home/nikita/.rvm&quot;
+declare -x rvm_prefix=&quot;/home/nikita&quot;
+declare -x rvm_pretty_print_flag
+declare -x rvm_proxy
+declare -x rvm_quiet_flag
+declare -x rvm_ruby_alias
+declare -x rvm_ruby_bits
+declare -x rvm_ruby_configure
+declare -x rvm_ruby_file
+declare -x rvm_ruby_global_gems_path
+declare -x rvm_ruby_make
+declare -x rvm_ruby_make_install
+declare -x rvm_ruby_mode
+declare -x rvm_ruby_string
+declare -x rvm_ruby_url
+declare -x rvm_script_name
+declare -x rvm_sdk
+declare -x rvm_shell_nounset
+declare -x rvm_silent_flag
+declare -x rvm_sticky_flag
+declare -x rvm_system_flag
+declare -x rvm_use_flag
+declare -x rvm_user_flag
+declare -x rvm_version=&quot;1.29.12-next (master)&quot;
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/scripts</b></font>$ cd ..
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ cd prolects
+bash: cd: prolects: Нет такого файла или каталога
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace</b></font>$ cd projects
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects</b></font>$ cd lab04
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login --github-token ${GITHUB_TOKEN}
+<font color="#CC0000">token is invalid, or does not have sufficient scope; see https://docs.travis-ci.com/user/github-oauth-scopes/ for more information on scope</font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login --github-token ${GITHUB_TOKEN}
+<font color="#CC0000">token is invalid, or does not have sufficient scope; see https://docs.travis-ci.com/user/github-oauth-scopes/ for more information on scope</font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login --github-token da435ad6664d8a908c3021f1457835bc6aa7452e
+<font color="#CC0000">invalid access token - try running </font><font color="#CC0000"><b>travis login</b></font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login
+<font color="#CC0000">invalid access token - try running </font><font color="#CC0000"><b>travis login</b></font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login --help
+Authenticates against the API and stores the token.
+Usage: <b>travis login [OPTIONS]</b>
+    -h, --help                       Display help
+    -i, --[no-]interactive           be interactive and colorful
+    -E, --[no-]explode               don&apos;t rescue exceptions
+        --skip-version-check         don&apos;t check if travis client is up to date
+        --skip-completion-check      don&apos;t check if auto-completion is set up
+    -e, --api-endpoint URL           Travis API server to talk to
+    -I, --[no-]insecure              do not verify SSL certificate of API endpoint
+        --pro                        short-cut for --api-endpoint &apos;https://api.travis-ci.com/&apos;
+        --com                        short-cut for --api-endpoint &apos;https://api.travis-ci.com/&apos;
+        --org                        short-cut for --api-endpoint &apos;https://api.travis-ci.org/&apos;
+        --staging                    talks to staging system
+    -t, --token [ACCESS_TOKEN]       access token to use
+        --debug                      show API requests
+        --debug-http                 show HTTP(S) exchange
+    -X, --enterprise [NAME]          use enterprise setup (optionally takes name for multiple setups)
+        --adapter ADAPTER            Faraday adapter to use for HTTP requests. If omitted, use Typhoeus if it is installed, and Net::HTTP otherwise. See https://lostisland.github.io/faraday/adapters/ for more info
+    -g, --github-token TOKEN         identify by GitHub token
+    -T, --auto-token                 try to figure out who you are automatically (might send another apps token to Travis, token will not be stored)
+    -p, --auto-password              try to load password from OSX keychain (will not be stored)
+    -a, --auto                       shorthand for --auto-token --auto-password
+    -u, --user LOGIN                 user to log in as
+    -M, --no-manual                  do not use interactive login
+        --list-github-token          instead of actually logging in, list found GitHub tokens
+        --skip-token-check           don&apos;t verify the token with github
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis --help
+/home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/tools/notification.rb:10: warning: already initialized constant Travis::Tools::Notification::DEFAULT
+/home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/tools/notification.rb:10: warning: previous definition of DEFAULT was here
+/home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/tools/notification.rb:11: warning: already initialized constant Travis::Tools::Notification::ICON
+/home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/tools/notification.rb:11: warning: previous definition of ICON was here
+/home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/tools/notification.rb:10: warning: already initialized constant Travis::Tools::Notification::DEFAULT
+/home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/tools/notification.rb:10: warning: previous definition of DEFAULT was here
+/home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/tools/notification.rb:11: warning: already initialized constant Travis::Tools::Notification::ICON
+/home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/tools/notification.rb:11: warning: previous definition of ICON was here
+Usage: travis COMMAND ...
+
+Available commands:
+
+    non-API commands
+        <b>help</b>           <font color="#C4A000">helps you out when in dire need of information</font>
+        <b>version</b>        <font color="#C4A000">outputs the client version</font>
+    API commands
+        <b>accounts</b>       <font color="#C4A000">displays accounts and their subscription status</font>
+        <b>console</b>        <font color="#C4A000">interactive shell; requires `pry`</font>
+        <b>endpoint</b>       <font color="#C4A000">displays or changes the API endpoint</font>
+        <b>lint</b>           <font color="#C4A000">display warnings for a .travis.yml</font>
+        <b>login</b>          <font color="#C4A000">authenticates against the API and stores the token</font>
+        <b>logout</b>         <font color="#C4A000">deletes the stored API token</font>
+        <b>raw</b>            <font color="#C4A000">makes an (authenticated) API call and prints out the result</font>
+        <b>report</b>         <font color="#C4A000">generates a report useful for filing issues</font>
+        <b>repos</b>          <font color="#C4A000">lists repositories the user has certain permissions on</font>
+        <b>sync</b>           <font color="#C4A000">triggers a new sync with GitHub</font>
+        <b>token</b>          <font color="#C4A000">outputs the secret API token</font>
+        <b>whatsup</b>        <font color="#C4A000">lists most recent builds</font>
+        <b>whoami</b>         <font color="#C4A000">outputs the current user</font>
+    Repo commands
+        <b>branches</b>       <font color="#C4A000">displays the most recent build for each branch</font>
+        <b>cache</b>          <font color="#C4A000">lists or deletes repository caches</font>
+        <b>cancel</b>         <font color="#C4A000">cancels a job or build</font>
+        <b>disable</b>        <font color="#C4A000">disables a project</font>
+        <b>enable</b>         <font color="#C4A000">enables a project</font>
+        <b>encrypt</b>        <font color="#C4A000">encrypts values for the .travis.yml</font>
+        <b>encrypt-file</b>   <font color="#C4A000">encrypts a file and adds decryption steps to .travis.yml</font>
+        <b>env</b>            <font color="#C4A000">show or modify build environment variables</font>
+        <b>history</b>        <font color="#C4A000">displays a project&apos;s build history</font>
+        <b>init</b>           <font color="#C4A000">generates a .travis.yml and enables the project</font>
+        <b>logs</b>           <font color="#C4A000">streams test logs</font>
+        <b>open</b>           <font color="#C4A000">opens a build or job in the browser</font>
+        <b>pubkey</b>         <font color="#C4A000">prints out a repository&apos;s public key</font>
+        <b>requests</b>       <font color="#C4A000">lists recent requests</font>
+        <b>restart</b>        <font color="#C4A000">restarts a build or job</font>
+        <b>settings</b>       <font color="#C4A000">access repository settings</font>
+        <b>setup</b>          <font color="#C4A000">sets up an addon or deploy target</font>
+        <b>show</b>           <font color="#C4A000">displays a build or job</font>
+        <b>sshkey</b>         <font color="#C4A000">checks, updates or deletes an SSH key</font>
+        <b>status</b>         <font color="#C4A000">checks status of the latest build</font>
+
+run `/home/nikita/.rvm/gems/ruby-2.4.2/bin/travis help COMMAND` for more info
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login -t B4vTm7RvMXO1wjc1ccPeMQ
+We need your <u style="text-decoration-style:single"><b>GitHub login</b></u> to identify you.
+This information will <u style="text-decoration-style:single"><b>not be sent to Travis CI</b></u>, only to <font color="#C4A000">api.github.com</font>.
+The password will not be displayed.
+
+Try running with <font color="#C4A000">--github-token</font> or <font color="#C4A000">--auto</font> if you don&apos;t want to enter your password anyway.
+
+Username: Nikita0042
+Password for Nikita0042: ********
+<font color="#CC0000">Not Found</font>
+<font color="#CC0000">for a full error report, run </font><font color="#CC0000"><b>travis report</b></font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis report
+<u style="text-decoration-style:single"><b>System</b></u>
+Ruby:                     <b>Ruby 2.4.2-p198</b>
+Operating System:         <b>Ubuntu 20.04</b>
+RubyGems:                 <b>RubyGems 3.0.8</b>
+
+<u style="text-decoration-style:single"><b>CLI</b></u>
+Version:                  <b>1.10.0</b>
+Plugins:                  <b>none</b>
+Auto-Completion:          <b>yes</b>
+Last Version Check:       <b>2021-04-22 09:33:57 +0300</b>
+
+<u style="text-decoration-style:single"><b>Session</b></u>
+API Endpoint:             <b>https://api.travis-ci.org/</b>
+Logged In:                <b>no</b>
+Verify SSL:               <b>yes</b>
+Enterprise:               <b>no</b>
+
+<u style="text-decoration-style:single"><b>Endpoints</b></u>
+org:                      <b>https://api.travis-ci.org/</b> (current)
+
+<u style="text-decoration-style:single"><b>Last Exception</b></u>
+<font color="#C4A000">An error occurred running `travis login`:</font>
+<font color="#C4A000">    RuntimeError: Not Found</font>
+<font color="#C4A000">        from /home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/tools/github.rb:212:in `rescue in basic_auth&apos;</font>
+<font color="#C4A000">        from /home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/tools/github.rb:209:in `basic_auth&apos;</font>
+<font color="#C4A000">        from /home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/tools/github.rb:216:in `login&apos;</font>
+<font color="#C4A000">        from /home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/tools/github.rb:81:in `possible_tokens&apos;</font>
+<font color="#C4A000">        from /home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/tools/github.rb:50:in `each_token&apos;</font>
+<font color="#C4A000">        from /home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/tools/github.rb:37:in `with_token&apos;</font>
+<font color="#C4A000">        from /home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/cli/login.rb:31:in `login&apos;</font>
+<font color="#C4A000">        from /home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/cli/login.rb:50:in `run&apos;</font>
+<font color="#C4A000">        from /home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/cli/command.rb:200:in `execute&apos;</font>
+<font color="#C4A000">        from /home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/lib/travis/cli.rb:64:in `run&apos;</font>
+<font color="#C4A000">        from /home/nikita/.rvm/gems/ruby-2.4.2/gems/travis-1.10.0/bin/travis:18:in `&lt;top (required)&gt;&apos;</font>
+<font color="#C4A000">        from /home/nikita/.rvm/gems/ruby-2.4.2/bin/travis:23:in `load&apos;</font>
+<font color="#C4A000">        from /home/nikita/.rvm/gems/ruby-2.4.2/bin/travis:23:in `&lt;main&gt;&apos;</font>
+<font color="#C4A000">        from /home/nikita/.rvm/gems/ruby-2.4.2/bin/ruby_executable_hooks:24:in `eval&apos;</font>
+<font color="#C4A000">        from /home/nikita/.rvm/gems/ruby-2.4.2/bin/ruby_executable_hooks:24:in `&lt;main&gt;&apos;</font>
+
+
+For issues with the command line tool, please visit <u style="text-decoration-style:single">https://github.com/travis-ci/travis.rb/issues</u>.
+For Travis CI in general, go to <u style="text-decoration-style:single">https://github.com/travis-ci/travis-ci/issues</u> or email <u style="text-decoration-style:single">support@travis-ci.com</u>.
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login --github-token ${GITHUB_TOKEN}
+<font color="#CC0000">invalid access token - try running </font><font color="#CC0000"><b>travis login</b></font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login -t B4vTm7RvMXO1wjc1ccPeMQ
+<font color="#CC0000">invalid access token - try running </font><font color="#CC0000"><b>travis login</b></font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login
+We need your <u style="text-decoration-style:single"><b>GitHub login</b></u> to identify you.
+This information will <u style="text-decoration-style:single"><b>not be sent to Travis CI</b></u>, only to <font color="#C4A000">api.github.com</font>.
+The password will not be displayed.
+
+Try running with <font color="#C4A000">--github-token</font> or <font color="#C4A000">--auto</font> if you don&apos;t want to enter your password anyway.
+
+Username: Nikita0042
+Password for Nikita0042: ***********
+<font color="#CC0000">Not Found</font>
+<font color="#CC0000">for a full error report, run </font><font color="#CC0000"><b>travis report</b></font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login
+We need your <u style="text-decoration-style:single"><b>GitHub login</b></u> to identify you.
+This information will <u style="text-decoration-style:single"><b>not be sent to Travis CI</b></u>, only to <font color="#C4A000">api.github.com</font>.
+The password will not be displayed.
+
+Try running with <font color="#C4A000">--github-token</font> or <font color="#C4A000">--auto</font> if you don&apos;t want to enter your password anyway.
+
+Username: Nikita042
+Password for Nikita042: ***
+<font color="#CC0000">Not Found</font>
+<font color="#CC0000">for a full error report, run </font><font color="#CC0000"><b>travis report</b></font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login
+We need your <u style="text-decoration-style:single"><b>GitHub login</b></u> to identify you.
+This information will <u style="text-decoration-style:single"><b>not be sent to Travis CI</b></u>, only to <font color="#C4A000">api.github.com</font>.
+The password will not be displayed.
+
+Try running with <font color="#C4A000">--github-token</font> or <font color="#C4A000">--auto</font> if you don&apos;t want to enter your password anyway.
+
+Username: Nikita0042
+Password for Nikita0042: ***********
+<font color="#CC0000">Not Found</font>
+<font color="#CC0000">for a full error report, run </font><font color="#CC0000"><b>travis report</b></font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login --auto
+We need your <u style="text-decoration-style:single"><b>GitHub login</b></u> to identify you.
+This information will <u style="text-decoration-style:single"><b>not be sent to Travis CI</b></u>, only to <font color="#C4A000">api.github.com</font>.
+The password will not be displayed.
+
+Try running with <font color="#C4A000">--github-token</font> or <font color="#C4A000">--auto</font> if you don&apos;t want to enter your password anyway.
+
+Username: Nikita0042
+Password for Nikita0042: ************
+<font color="#CC0000">Not Found</font>
+<font color="#CC0000">for a full error report, run </font><font color="#CC0000"><b>travis report</b></font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login --auto
+We need your <u style="text-decoration-style:single"><b>GitHub login</b></u> to identify you.
+This information will <u style="text-decoration-style:single"><b>not be sent to Travis CI</b></u>, only to <font color="#C4A000">api.github.com</font>.
+The password will not be displayed.
+
+Try running with <font color="#C4A000">--github-token</font> or <font color="#C4A000">--auto</font> if you don&apos;t want to enter your password anyway.
+
+Username: ^C<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ 
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login --help
+Authenticates against the API and stores the token.
+Usage: <b>travis login [OPTIONS]</b>
+    -h, --help                       Display help
+    -i, --[no-]interactive           be interactive and colorful
+    -E, --[no-]explode               don&apos;t rescue exceptions
+        --skip-version-check         don&apos;t check if travis client is up to date
+        --skip-completion-check      don&apos;t check if auto-completion is set up
+    -e, --api-endpoint URL           Travis API server to talk to
+    -I, --[no-]insecure              do not verify SSL certificate of API endpoint
+        --pro                        short-cut for --api-endpoint &apos;https://api.travis-ci.com/&apos;
+        --com                        short-cut for --api-endpoint &apos;https://api.travis-ci.com/&apos;
+        --org                        short-cut for --api-endpoint &apos;https://api.travis-ci.org/&apos;
+        --staging                    talks to staging system
+    -t, --token [ACCESS_TOKEN]       access token to use
+        --debug                      show API requests
+        --debug-http                 show HTTP(S) exchange
+    -X, --enterprise [NAME]          use enterprise setup (optionally takes name for multiple setups)
+        --adapter ADAPTER            Faraday adapter to use for HTTP requests. If omitted, use Typhoeus if it is installed, and Net::HTTP otherwise. See https://lostisland.github.io/faraday/adapters/ for more info
+    -g, --github-token TOKEN         identify by GitHub token
+    -T, --auto-token                 try to figure out who you are automatically (might send another apps token to Travis, token will not be stored)
+    -p, --auto-password              try to load password from OSX keychain (will not be stored)
+    -a, --auto                       shorthand for --auto-token --auto-password
+    -u, --user LOGIN                 user to log in as
+    -M, --no-manual                  do not use interactive login
+        --list-github-token          instead of actually logging in, list found GitHub tokens
+        --skip-token-check           don&apos;t verify the token with github
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login --list-github-token
+We need your <u style="text-decoration-style:single"><b>GitHub login</b></u> to identify you.
+This information will <u style="text-decoration-style:single"><b>not be sent to Travis CI</b></u>, only to <font color="#C4A000">api.github.com</font>.
+The password will not be displayed.
+
+Try running with <font color="#C4A000">--github-token</font> or <font color="#C4A000">--auto</font> if you don&apos;t want to enter your password anyway.
+
+Username: ^C<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ export
+declare -x COLORTERM=&quot;truecolor&quot;
+declare -x DBUS_SESSION_BUS_ADDRESS=&quot;unix:path=/run/user/1000/bus&quot;
+declare -x DESKTOP_SESSION=&quot;ubuntu&quot;
+declare -x DISPLAY=&quot;:0&quot;
+declare -x GDMSESSION=&quot;ubuntu&quot;
+declare -x GEM_HOME=&quot;/home/nikita/.rvm/gems/ruby-2.4.2&quot;
+declare -x GEM_PATH=&quot;/home/nikita/.rvm/gems/ruby-2.4.2:/home/nikita/.rvm/gems/ruby-2.4.2@global&quot;
+declare -x GITHUB_EMAIL=&quot;foxwrld@mail.ru&quot;
+declare -x GITHUB_TOKEN=&quot;da435ad6664d8a908c3021f1457835bc6aa7452e&quot;
+declare -x GITHUB_USERNAME=&quot;Nikita0042&quot;
+declare -x GJS_DEBUG_OUTPUT=&quot;stderr&quot;
+declare -x GJS_DEBUG_TOPICS=&quot;JS ERROR;JS LOG&quot;
+declare -x GNOME_DESKTOP_SESSION_ID=&quot;this-is-deprecated&quot;
+declare -x GNOME_SHELL_SESSION_MODE=&quot;ubuntu&quot;
+declare -x GNOME_TERMINAL_SCREEN=&quot;/org/gnome/Terminal/screen/cfc54436_f862_42c3_a29a_babe7436e4c5&quot;
+declare -x GNOME_TERMINAL_SERVICE=&quot;:1.66&quot;
+declare -x GPG_AGENT_INFO=&quot;/run/user/1000/gnupg/S.gpg-agent:0:1&quot;
+declare -x GTK_MODULES=&quot;gail:atk-bridge&quot;
+declare -x HOME=&quot;/home/nikita&quot;
+declare -x IM_CONFIG_PHASE=&quot;1&quot;
+declare -x INVOCATION_ID=&quot;80531819c96e49958ea0ff1d2f4d73ff&quot;
+declare -x IRBRC=&quot;/home/nikita/.rvm/rubies/ruby-2.4.2/.irbrc&quot;
+declare -x JOURNAL_STREAM=&quot;8:29999&quot;
+declare -x LANG=&quot;ru_RU.UTF-8&quot;
+declare -x LANGUAGE=&quot;ru:en&quot;
+declare -x LC_ADDRESS=&quot;ru_RU.UTF-8&quot;
+declare -x LC_IDENTIFICATION=&quot;ru_RU.UTF-8&quot;
+declare -x LC_MEASUREMENT=&quot;ru_RU.UTF-8&quot;
+declare -x LC_MONETARY=&quot;ru_RU.UTF-8&quot;
+declare -x LC_NAME=&quot;ru_RU.UTF-8&quot;
+declare -x LC_NUMERIC=&quot;ru_RU.UTF-8&quot;
+declare -x LC_PAPER=&quot;ru_RU.UTF-8&quot;
+declare -x LC_TELEPHONE=&quot;ru_RU.UTF-8&quot;
+declare -x LC_TIME=&quot;ru_RU.UTF-8&quot;
+declare -x LESSCLOSE=&quot;/usr/bin/lesspipe %s %s&quot;
+declare -x LESSOPEN=&quot;| /usr/bin/lesspipe %s&quot;
+declare -x LOGNAME=&quot;nikita&quot;
+declare -x LS_COLORS=&quot;rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:&quot;
+declare -x MANAGERPID=&quot;713&quot;
+declare -x MY_RUBY_HOME=&quot;/home/nikita/.rvm/rubies/ruby-2.4.2&quot;
+declare -x OLDPWD=&quot;/home/nikita/Nikita0042/workspace/projects&quot;
+declare -x PAPERSIZE=&quot;a4&quot;
+declare -x PATH=&quot;/home/nikita/.rvm/gems/ruby-2.4.2/bin:/home/nikita/.rvm/gems/ruby-2.4.2@global/bin:/home/nikita/.rvm/rubies/ruby-2.4.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/nikita/Nikita0042/workspace/node/bin:/home/nikita/.rvm/bin&quot;
+declare -x PWD=&quot;/home/nikita/Nikita0042/workspace/projects/lab04&quot;
+declare -x QT_ACCESSIBILITY=&quot;1&quot;
+declare -x QT_IM_MODULE=&quot;ibus&quot;
+declare -x RUBY_VERSION=&quot;ruby-2.4.2&quot;
+declare -x SESSION_MANAGER=&quot;local/nikita-VirtualBox:@/tmp/.ICE-unix/1015,unix/nikita-VirtualBox:/tmp/.ICE-unix/1015&quot;
+declare -x SHELL=&quot;/bin/bash&quot;
+declare -x SHLVL=&quot;1&quot;
+declare -x SSH_AGENT_PID=&quot;965&quot;
+declare -x SSH_AUTH_SOCK=&quot;/run/user/1000/keyring/ssh&quot;
+declare -x TERM=&quot;xterm-256color&quot;
+declare -x USER=&quot;nikita&quot;
+declare -x USERNAME=&quot;nikita&quot;
+declare -x VTE_VERSION=&quot;6003&quot;
+declare -x WINDOWPATH=&quot;2&quot;
+declare -x XAUTHORITY=&quot;/run/user/1000/gdm/Xauthority&quot;
+declare -x XDG_CONFIG_DIRS=&quot;/etc/xdg/xdg-ubuntu:/etc/xdg&quot;
+declare -x XDG_CURRENT_DESKTOP=&quot;ubuntu:GNOME&quot;
+declare -x XDG_DATA_DIRS=&quot;/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop&quot;
+declare -x XDG_MENU_PREFIX=&quot;gnome-&quot;
+declare -x XDG_RUNTIME_DIR=&quot;/run/user/1000&quot;
+declare -x XDG_SESSION_CLASS=&quot;user&quot;
+declare -x XDG_SESSION_DESKTOP=&quot;ubuntu&quot;
+declare -x XDG_SESSION_TYPE=&quot;x11&quot;
+declare -x XMODIFIERS=&quot;@im=ibus&quot;
+declare -x rvm_alias_expanded
+declare -x rvm_bin_flag
+declare -x rvm_bin_path=&quot;/home/nikita/.rvm/bin&quot;
+declare -x rvm_delete_flag
+declare -x rvm_docs_type
+declare -x rvm_file_name
+declare -x rvm_gemstone_package_file
+declare -x rvm_gemstone_url
+declare -x rvm_hook
+declare -x rvm_niceness
+declare -x rvm_nightly_flag
+declare -x rvm_only_path_flag
+declare -x rvm_path=&quot;/home/nikita/.rvm&quot;
+declare -x rvm_prefix=&quot;/home/nikita&quot;
+declare -x rvm_pretty_print_flag
+declare -x rvm_proxy
+declare -x rvm_quiet_flag
+declare -x rvm_ruby_alias
+declare -x rvm_ruby_bits
+declare -x rvm_ruby_configure
+declare -x rvm_ruby_file
+declare -x rvm_ruby_global_gems_path
+declare -x rvm_ruby_make
+declare -x rvm_ruby_make_install
+declare -x rvm_ruby_mode
+declare -x rvm_ruby_string
+declare -x rvm_ruby_url
+declare -x rvm_script_name
+declare -x rvm_sdk
+declare -x rvm_shell_nounset
+declare -x rvm_silent_flag
+declare -x rvm_sticky_flag
+declare -x rvm_system_flag
+declare -x rvm_use_flag
+declare -x rvm_user_flag
+declare -x rvm_version=&quot;1.29.12-next (master)&quot;
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ honebrew tavis
+honebrew: команда не найдена
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ honebrew travishonebrew: команда не найдена
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ homebrew travishomebrew: команда не найдена
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ brew install travis
+
+Команда «brew» не найдена. Возможно, вы имели в виду:
+
+  command &apos;qbrew&apos; from deb qbrew (0.4.1-8build1)
+  command &apos;brec&apos; from deb bplay (0.991-10build1)
+
+Try: sudo apt install &lt;deb name&gt;
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ sudo install brew
+[sudo] пароль для nikita: 
+install: после &apos;brew&apos; пропущен операнд, задающий целевой файл
+По команде «install --help» можно получить дополнительную информацию.
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ sudo install brew travis
+install: не удалось выполнить stat для &apos;brew&apos;: Нет такого файла или каталога
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ brew install gh
+ 
+Команда «brew» не найдена. Возможно, вы имели в виду:
+
+  command &apos;qbrew&apos; from deb qbrew (0.4.1-8build1)
+  command &apos;brec&apos; from deb bplay (0.991-10build1)
+
+Try: sudo apt install &lt;deb name&gt;
+
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ gem install gh
+Successfully installed gh-0.18.0
+Parsing documentation for gh-0.18.0
+Done installing documentation for gh after 0 seconds
+1 gem installed
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login --github-token da435ad6664d8a908c3021f1457835bc6aa7452e
+<font color="#CC0000">invalid access token - try running </font><font color="#CC0000"><b>travis login</b></font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login --auto
+We need your <u style="text-decoration-style:single"><b>GitHub login</b></u> to identify you.
+This information will <u style="text-decoration-style:single"><b>not be sent to Travis CI</b></u>, only to <font color="#C4A000">api.github.com</font>.
+The password will not be displayed.
+
+Try running with <font color="#C4A000">--github-token</font> or <font color="#C4A000">--auto</font> if you don&apos;t want to enter your password anyway.
+
+Username: Nikita0042
+Password for Nikita0042: ***********
+<font color="#CC0000">Not Found</font>
+<font color="#CC0000">for a full error report, run </font><font color="#CC0000"><b>travis report</b></font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ gem install travis -pre
+ERROR:  While executing gem ... (ArgumentError)
+    Invalid uri scheme for re
+Preface URLs with one of [&quot;http://&quot;, &quot;https://&quot;, &quot;file://&quot;, &quot;s3://&quot;]
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ gem install travis --pre
+Fetching travis-1.10.1.travis.1341.9.gem
+Successfully installed travis-1.10.1.travis.1341.9
+Parsing documentation for travis-1.10.1.travis.1341.9
+Installing ri documentation for travis-1.10.1.travis.1341.9
+Done installing documentation for travis after 1 seconds
+1 gem installed
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login --github-token da435ad6664d8a908c3021f1457835bc6aa7452e
+<font color="#CC0000">token is invalid, or does not have sufficient scope; see https://docs.travis-ci.com/user/github-oauth-scopes/ for more information on scope</font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login --github-token da435ad6664d8a908c3021f1457835bc6aa7452e --debug
+<font color="#75507B">** Loading &quot;/home/nikita/.travis/config.yml&quot;</font>
+<font color="#75507B">** GET &quot;config&quot;</font>
+<font color="#75507B">**   took 0.63 seconds</font>
+<font color="#75507B">** GitHub API: GET /user?per_page=100</font>
+<font color="#75507B">**   took 0.3 seconds</font>
+<font color="#75507B">** POST &quot;auth/github&quot; {:github_token=&gt;&quot;da435ad6664d8a908c3021f1457835bc6aa7452e&quot;}</font>
+<font color="#75507B">**   took 0.64 seconds</font>
+<font color="#CC0000">invalid access token - try running </font><font color="#CC0000"><b>travis login</b></font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login --github-token da435ad6664d8a908c3021f1457835bc6aa7452e --debug
+<font color="#75507B">** Loading &quot;/home/nikita/.travis/config.yml&quot;</font>
+<font color="#75507B">** Timeout::Error: execution expired</font>
+<font color="#75507B">** GET &quot;config&quot;</font>
+<font color="#75507B">**   took 0.64 seconds</font>
+<font color="#75507B">** GitHub API: GET /user?per_page=100</font>
+<font color="#75507B">**   took 0.34 seconds</font>
+<font color="#75507B">** POST &quot;auth/github&quot; {:github_token=&gt;&quot;da435ad6664d8a908c3021f1457835bc6aa7452e&quot;}</font>
+<font color="#75507B">**   took 0.76 seconds</font>
+<font color="#75507B">** GET &quot;users/&quot;</font>
+<font color="#75507B">**   took 0.7 seconds</font>
+<font color="#CC0000">Nikita0042 has not granted Travis CI the required permissions. Please try re-syncing your user data at https://travis-ci.org/account/preferences and try logging in via travis-ci.org</font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login --github-token da435ad6664d8a908c3021f1457835bc6aa7452e --debug
+<font color="#75507B">** Loading &quot;/home/nikita/.travis/config.yml&quot;</font>
+<font color="#75507B">** GET &quot;config&quot;</font>
+<font color="#75507B">**   took 0.63 seconds</font>
+<font color="#75507B">** GitHub API: GET /user?per_page=100</font>
+<font color="#75507B">**   took 0.49 seconds</font>
+<font color="#75507B">** POST &quot;auth/github&quot; {:github_token=&gt;&quot;da435ad6664d8a908c3021f1457835bc6aa7452e&quot;}</font>
+<font color="#75507B">**   took 0.64 seconds</font>
+<font color="#CC0000">invalid access token - try running </font><font color="#CC0000"><b>travis login</b></font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ travis login --github-token da435ad6664d8a908c3021f1457835bc6aa7452e --debug
+<font color="#75507B">** Loading &quot;/home/nikita/.travis/config.yml&quot;</font>
+<font color="#75507B">** GET &quot;config&quot;</font>
+<font color="#75507B">**   took 0.64 seconds</font>
+<font color="#75507B">** GitHub API: GET /user?per_page=100</font>
+<font color="#75507B">**   took 0.3 seconds</font>
+<font color="#75507B">** POST &quot;auth/github&quot; {:github_token=&gt;&quot;da435ad6664d8a908c3021f1457835bc6aa7452e&quot;}</font>
+<font color="#75507B">**   took 1 seconds</font>
+<font color="#75507B">** GET &quot;users/&quot;</font>
+<font color="#75507B">**   took 0.71 seconds</font>
+<font color="#4E9A06">Successfully logged in as Nikita0042!</font>
+<font color="#75507B">** Deleting &quot;/home/nikita/.travis/error.log&quot;</font>
+<font color="#75507B">** Storing &quot;/home/nikita/.travis/config.yml&quot;</font>
+<font color="#4E9A06"><b>nikita@nikita-VirtualBox</b></font>:<font color="#3465A4"><b>~/Nikita0042/workspace/projects/lab04</b></font>$ 
+</pre>
