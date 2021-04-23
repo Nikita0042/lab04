@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.com/Nikita0042/lab04.svg?branch=main)](https://travis-ci.com/Nikita0042/lab04)
+[![Build Status](https://travis-ci.com/Nikita0042/lab04.svg?branch=master)](https://travis-ci.com/Nikita0042/lab04)
+
 ## Laboratory work III
 
 Данная лабораторная работа посвещена изучению систем автоматизации сборки проекта на примере **CMake**
