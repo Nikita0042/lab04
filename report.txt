@@ -13,3 +13,591 @@ token is invalid, or does not have sufficient scope; see https://docs.travis-ci.
 nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis login --github-token ${GITHUB_TOKEN}
 token is invalid, or does not have sufficient scope; see https://docs.travis-ci.com/user/github-oauth-scopes/ for more information on scope
 nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ 
+
+
+
+nikita@nikita-VirtualBox:~$ cd Nikita0042
+nikita@nikita-VirtualBox:~/Nikita0042$ cd workspace
+nikita@nikita-VirtualBox:~/Nikita0042/workspace$ cd scripts
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/scripts$ ls
+activate  exports
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/scripts$ source activate
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/scripts$ source exports
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/scripts$ cd ..
+nikita@nikita-VirtualBox:~/Nikita0042/workspace$ cd projects
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects$ cd lab04
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis login --github-token ${GITHUB_TOKEN}
+Successfully logged in as Nikita0042!
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis lint
+Hooray, .travis.yml looks valid :)
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ gist README.md
+Traceback (most recent call last):
+	2: from /usr/local/bin/gist:23:in `<main>'
+	1: from /usr/lib/ruby/2.7.0/rubygems.rb:294:in `activate_bin_path'
+/usr/lib/ruby/2.7.0/rubygems.rb:275:in `find_spec_for_exe': can't find gem gist (>= 0.a) with executable gist (Gem::GemNotFoundException)
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ gist README.md
+Traceback (most recent call last):
+	2: from /usr/local/bin/gist:23:in `<main>'
+	1: from /usr/lib/ruby/2.7.0/rubygems.rb:294:in `activate_bin_path'
+/usr/lib/ruby/2.7.0/rubygems.rb:275:in `find_spec_for_exe': can't find gem gist (>= 0.a) with executable gist (Gem::GemNotFoundException)
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ env PATH
+env: «PATH»: Нет такого файла или каталога
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ gem install gist
+Fetching gist-6.0.0.gem
+Successfully installed gist-6.0.0
+Parsing documentation for gist-6.0.0
+Installing ri documentation for gist-6.0.0
+Done installing documentation for gist after 0 seconds
+1 gem installed
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ gist README.md
+https://gist.github.com/360d83c8191e2be5ce637db62e48cd34
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git add .travis.yml
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git add README.md
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git commit -m"added CI"
+[master 69d3b7f] added CI
+ 2 files changed, 13 insertions(+)
+ create mode 100644 .travis.yml
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git push origin master
+Username for 'https://github.com': Nikita0042
+Password for 'https://Nikita0042@github.com': 
+Перечисление объектов: 6, готово.
+Подсчет объектов: 100% (6/6), готово.
+Сжатие объектов: 100% (4/4), готово.
+Запись объектов: 100% (4/4), 584 bytes | 584.00 KiB/s, готово.
+Всего 4 (изменения 2), повторно использовано 0 (изменения 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Nikita0042/lab04
+   c2809b7..69d3b7f  master -> master
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis lint
+Hooray, .travis.yml looks valid :)
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis accounts
+Nikita0042 (Nikita0042): subscribed, 7 repositories
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis sync
+synchronizing: . done
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis repos
+Nikita0042/- (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+Nikita0042/Lab02-2 (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+Nikita0042/RK1 (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+Nikita0042/lab02 (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+Nikita0042/lab03 (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+Nikita0042/lab04 (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+
+Nikita0042/old (active: no, admin: yes, push: yes, pull: yes)
+Description: ???
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis enable
+Detected repository as Nikita0042/lab04, is this correct? |yes| y
+Nikita0042/lab04: enabled :)
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis whatsup
+nothing to show
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis branches
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis history
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis show
+no build yet for Nikita0042/lab04
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git commit -a -m"modify"
+[master d5f6288] modify
+ 4 files changed, 19 insertions(+), 268 deletions(-)
+ rewrite report.txt (99%)
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git push origin master
+Username for 'https://github.com': Nikita0042
+Password for 'https://Nikita0042@github.com': 
+Перечисление объектов: 15, готово.
+Подсчет объектов: 100% (15/15), готово.
+Сжатие объектов: 100% (9/9), готово.
+Запись объектов: 100% (9/9), 1.07 KiB | 1.07 MiB/s, готово.
+Всего 9 (изменения 5), повторно использовано 0 (изменения 0)
+remote: Resolving deltas: 100% (5/5), completed with 4 local objects.
+To https://github.com/Nikita0042/lab04
+   69d3b7f..d5f6288  master -> master
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis lint
+Hooray, .travis.yml looks valid :)
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis sync
+synchronizing: . done
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ ls
+_build            formatter_lib            REPORT0.md          solver_lib
+CMakeCache.txt    hello_world_application  report.html         term.html
+CMakeFiles        LICENSE                  REPORT.md           test.md
+CMakeLists.txt    preview.png              report.txt
+formatter_ex_lib  README.md                solver_application
+'nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ rm _build
+rm: невозможно удалить '_build': Это каталог
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ rmdir _build
+rmdir: не удалось удалить '_build': Каталог не пуст
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ rmdir --help
+Использование: rmdir [ПАРАМЕТР]… КАТАЛОГ…
+Удаляет КАТАЛОГ(и), если они пусты.
+
+      --ignore-fail-on-non-empty
+                  игнорировать все ошибки, которые возникают из-за того, что
+                  каталог не пуст
+  -p, --parents   удалить КАТАЛОГ и его потомков. Например, «rmdir -p a/b/c»
+                  делает то же, что и «rmdir a/b/c a/b a».
+  -v, --verbose   выводить сообщение для каждого обработанного каталога
+      --help     показать эту справку и выйти
+      --version  показать информацию о версии и выйти
+
+Страница справки по GNU coreutils: <https://www.gnu.org/software/coreutils/>
+Об ошибках в переводе сообщений «rmdir» сообщайте по адресу <gnu@d07.ru>
+Полная документация: <https://www.gnu.org/software/coreutils/rmdir>
+или доступная локально: info '(coreutils) rmdir invocation'
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ rmdir _build --ignore-fail-on-non-empty
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ ls
+_build            formatter_lib            REPORT0.md          solver_lib
+CMakeCache.txt    hello_world_application  report.html         term.html
+CMakeFiles        LICENSE                  REPORT.md           test.md
+CMakeLists.txt    preview.png              report.txt
+formatter_ex_lib  README.md                solver_application
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ rmdir --ignore-fail-on-non-empty _build
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ ls
+_build            formatter_lib            REPORT0.md          solver_lib
+CMakeCache.txt    hello_world_application  report.html         term.html
+CMakeFiles        LICENSE                  REPORT.md           test.md
+CMakeLists.txt    preview.png              report.txt
+formatter_ex_lib  README.md                solver_application
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ rmdir -p _buildrmdir: не удалось удалить '_build': Каталог не пуст
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ rmdir -p _build--ignore-fail-on-non-empty
+rmdir: не удалось удалить '_build--ignore-fail-on-non-empty': Нет такого файла или каталога
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ rmdir -p _build --ignore-fail-on-non-empty
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ ls
+_build            formatter_lib            REPORT0.md          solver_lib
+CMakeCache.txt    hello_world_application  report.html         term.html
+CMakeFiles        LICENSE                  REPORT.md           test.md
+CMakeLists.txt    preview.png              report.txt
+formatter_ex_lib  README.md                solver_application
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git status
+На ветке master
+Изменения, которые не в индексе для коммита:
+  (используйте «git add/rm <файл>…», чтобы добавить или удалить файл из индекса)
+  (use "git restore <file>..." to discard changes in working directory)
+	удалено:       _build/CMakeCache.txt
+	удалено:       _build/CMakeFiles/3.20.1/CMakeCCompiler.cmake
+	удалено:       _build/CMakeFiles/3.20.1/CMakeCXXCompiler.cmake
+	удалено:       _build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_C.bin
+	удалено:       _build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_CXX.bin
+	удалено:       _build/CMakeFiles/3.20.1/CMakeSystem.cmake
+	удалено:       _build/CMakeFiles/3.20.1/CompilerIdC/CMakeCCompilerId.c
+	удалено:       _build/CMakeFiles/3.20.1/CompilerIdC/a.out
+	удалено:       _build/CMakeFiles/3.20.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
+	удалено:       _build/CMakeFiles/3.20.1/CompilerIdCXX/a.out
+	удалено:       _build/CMakeFiles/CMakeOutput.log
+	удалено:       _build/CMakeFiles/cmake.check_cache
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+	.term.html.swp
+	term.html
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git commit -m"del _build"
+На ветке master
+Изменения, которые не в индексе для коммита:
+  (используйте «git add/rm <файл>…», чтобы добавить или удалить файл из индекса)
+  (use "git restore <file>..." to discard changes in working directory)
+	удалено:       _build/CMakeCache.txt
+	удалено:       _build/CMakeFiles/3.20.1/CMakeCCompiler.cmake
+	удалено:       _build/CMakeFiles/3.20.1/CMakeCXXCompiler.cmake
+	удалено:       _build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_C.bin
+	удалено:       _build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_CXX.bin
+	удалено:       _build/CMakeFiles/3.20.1/CMakeSystem.cmake
+	удалено:       _build/CMakeFiles/3.20.1/CompilerIdC/CMakeCCompilerId.c
+	удалено:       _build/CMakeFiles/3.20.1/CompilerIdC/a.out
+	удалено:       _build/CMakeFiles/3.20.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
+	удалено:       _build/CMakeFiles/3.20.1/CompilerIdCXX/a.out
+	удалено:       _build/CMakeFiles/CMakeOutput.log
+	удалено:       _build/CMakeFiles/cmake.check_cache
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+	.term.html.swp
+	term.html
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git commit -a -m"del _build"
+[master c17e2fc] del _build
+ 12 files changed, 2474 deletions(-)
+ delete mode 100644 _build/CMakeCache.txt
+ delete mode 100644 _build/CMakeFiles/3.20.1/CMakeCCompiler.cmake
+ delete mode 100644 _build/CMakeFiles/3.20.1/CMakeCXXCompiler.cmake
+ delete mode 100755 _build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_C.bin
+ delete mode 100755 _build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_CXX.bin
+ delete mode 100644 _build/CMakeFiles/3.20.1/CMakeSystem.cmake
+ delete mode 100644 _build/CMakeFiles/3.20.1/CompilerIdC/CMakeCCompilerId.c
+ delete mode 100755 _build/CMakeFiles/3.20.1/CompilerIdC/a.out
+ delete mode 100644 _build/CMakeFiles/3.20.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
+ delete mode 100755 _build/CMakeFiles/3.20.1/CompilerIdCXX/a.out
+ delete mode 100644 _build/CMakeFiles/CMakeOutput.log
+ delete mode 100644 _build/CMakeFiles/cmake.check_cache
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git push origin master
+Username for 'https://github.com': Nikita0042
+Password for 'https://Nikita0042@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Nikita0042/lab04/'
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git push origin master
+Username for 'https://github.com': Nikita0042
+Password for 'https://Nikita0042@github.com': 
+Перечисление объектов: 3, готово.
+Подсчет объектов: 100% (3/3), готово.
+Сжатие объектов: 100% (2/2), готово.
+Запись объектов: 100% (2/2), 223 bytes | 223.00 KiB/s, готово.
+Всего 2 (изменения 1), повторно использовано 0 (изменения 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Nikita0042/lab04
+   d5f6288..c17e2fc  master -> master
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git commit -a -m"del _build and other"
+[master e0bf7b2] del _build and other
+ 144 files changed, 16458 deletions(-)
+ delete mode 100644 CMakeFiles/3.20.1/CMakeCCompiler.cmake
+ delete mode 100644 CMakeFiles/3.20.1/CMakeCXXCompiler.cmake
+ delete mode 100755 CMakeFiles/3.20.1/CMakeDetermineCompilerABI_C.bin
+ delete mode 100755 CMakeFiles/3.20.1/CMakeDetermineCompilerABI_CXX.bin
+ delete mode 100644 CMakeFiles/3.20.1/CMakeSystem.cmake
+ delete mode 100644 CMakeFiles/3.20.1/CompilerIdC/CMakeCCompilerId.c
+ delete mode 100755 CMakeFiles/3.20.1/CompilerIdC/a.out
+ delete mode 100644 CMakeFiles/3.20.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
+ delete mode 100755 CMakeFiles/3.20.1/CompilerIdCXX/a.out
+ delete mode 100644 CMakeFiles/CMakeOutput.log
+ delete mode 100644 CMakeFiles/cmake.check_cache
+ delete mode 100644 formatter_ex_lib/_build/CMakeFiles/CMakeDirectoryInformation.cmake
+ delete mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/DependInfo.cmake
+ delete mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/build.make
+ delete mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/cmake_clean.cmake
+ delete mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/cmake_clean_target.cmake
+ delete mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/compiler_depend.internal
+ delete mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/compiler_depend.make
+ delete mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/compiler_depend.ts
+ delete mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/depend.make
+ delete mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/flags.make
+ delete mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/formatter_ex.cpp.o
+ delete mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/formatter_ex.cpp.o.d
+ delete mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/link.txt
+ delete mode 100644 formatter_ex_lib/_build/CMakeFiles/formatter_ex.dir/progress.make
+ delete mode 100644 formatter_ex_lib/_build/CMakeFiles/progress.marks
+ delete mode 100644 formatter_ex_lib/_build/Makefile
+ delete mode 100644 formatter_ex_lib/_build/cmake_install.cmake
+ delete mode 100644 formatter_ex_lib/_build/libformatter_ex.a
+ delete mode 100644 formatter_lib/_build/CMakeFiles/CMakeDirectoryInformation.cmake
+ delete mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/DependInfo.cmake
+ delete mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/build.make
+ delete mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/cmake_clean.cmake
+ delete mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/cmake_clean_target.cmake
+ delete mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/compiler_depend.internal
+ delete mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/compiler_depend.make
+ delete mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/compiler_depend.ts
+ delete mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/depend.make
+ delete mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/flags.make
+ delete mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/formatter.cpp.o
+ delete mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/formatter.cpp.o.d
+ delete mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/link.txt
+ delete mode 100644 formatter_lib/_build/CMakeFiles/formatter.dir/progress.make
+ delete mode 100644 formatter_lib/_build/CMakeFiles/progress.marks
+ delete mode 100644 formatter_lib/_build/Makefile
+ delete mode 100644 formatter_lib/_build/cmake_install.cmake
+ delete mode 100644 formatter_lib/_build/libformatter.a
+ delete mode 100644 hello_world_application/_build/CMakeCache.txt
+ delete mode 100644 hello_world_application/_build/CMakeFiles/3.20.1/CMakeCCompiler.cmake
+ delete mode 100644 hello_world_application/_build/CMakeFiles/3.20.1/CMakeCXXCompiler.cmake
+ delete mode 100755 hello_world_application/_build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_C.bin
+ delete mode 100755 hello_world_application/_build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_CXX.bin
+ delete mode 100644 hello_world_application/_build/CMakeFiles/3.20.1/CMakeSystem.cmake
+ delete mode 100644 hello_world_application/_build/CMakeFiles/3.20.1/CompilerIdC/CMakeCCompilerId.c
+ delete mode 100755 hello_world_application/_build/CMakeFiles/3.20.1/CompilerIdC/a.out
+ delete mode 100644 hello_world_application/_build/CMakeFiles/3.20.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
+ delete mode 100755 hello_world_application/_build/CMakeFiles/3.20.1/CompilerIdCXX/a.out
+ delete mode 100644 hello_world_application/_build/CMakeFiles/CMakeDirectoryInformation.cmake
+ delete mode 100644 hello_world_application/_build/CMakeFiles/CMakeOutput.log
+ delete mode 100644 hello_world_application/_build/CMakeFiles/Makefile.cmake
+ delete mode 100644 hello_world_application/_build/CMakeFiles/Makefile2
+ delete mode 100644 hello_world_application/_build/CMakeFiles/TargetDirectories.txt
+ delete mode 100644 hello_world_application/_build/CMakeFiles/cmake.check_cache
+ delete mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/DependInfo.cmake
+ delete mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/build.make
+ delete mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/cmake_clean.cmake
+ delete mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/compiler_depend.internal
+ delete mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/compiler_depend.make
+ delete mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/compiler_depend.ts
+ delete mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/depend.make
+ delete mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/flags.make
+ delete mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/hello_world.cpp.o
+ delete mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/hello_world.cpp.o.d
+ delete mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/link.txt
+ delete mode 100644 hello_world_application/_build/CMakeFiles/hello_world.dir/progress.make
+ delete mode 100644 hello_world_application/_build/CMakeFiles/progress.marks
+ delete mode 100644 hello_world_application/_build/Makefile
+ delete mode 100644 hello_world_application/_build/cmake_install.cmake
+ delete mode 100755 hello_world_application/_build/hello_world
+ delete mode 100644 solver_application/_build/CMakeCache.txt
+ delete mode 100644 solver_application/_build/CMakeFiles/3.20.1/CMakeCCompiler.cmake
+ delete mode 100644 solver_application/_build/CMakeFiles/3.20.1/CMakeCXXCompiler.cmake
+ delete mode 100755 solver_application/_build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_C.bin
+ delete mode 100755 solver_application/_build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_CXX.bin
+ delete mode 100644 solver_application/_build/CMakeFiles/3.20.1/CMakeSystem.cmake
+ delete mode 100644 solver_application/_build/CMakeFiles/3.20.1/CompilerIdC/CMakeCCompilerId.c
+ delete mode 100755 solver_application/_build/CMakeFiles/3.20.1/CompilerIdC/a.out
+ delete mode 100644 solver_application/_build/CMakeFiles/3.20.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
+ delete mode 100755 solver_application/_build/CMakeFiles/3.20.1/CompilerIdCXX/a.out
+ delete mode 100644 solver_application/_build/CMakeFiles/CMakeDirectoryInformation.cmake
+ delete mode 100644 solver_application/_build/CMakeFiles/CMakeOutput.log
+ delete mode 100644 solver_application/_build/CMakeFiles/Makefile.cmake
+ delete mode 100644 solver_application/_build/CMakeFiles/Makefile2
+ delete mode 100644 solver_application/_build/CMakeFiles/TargetDirectories.txt
+ delete mode 100644 solver_application/_build/CMakeFiles/cmake.check_cache
+ delete mode 100644 solver_application/_build/CMakeFiles/progress.marks
+ delete mode 100644 solver_application/_build/CMakeFiles/solver.dir/DependInfo.cmake
+ delete mode 100644 solver_application/_build/CMakeFiles/solver.dir/build.make
+ delete mode 100644 solver_application/_build/CMakeFiles/solver.dir/cmake_clean.cmake
+ delete mode 100644 solver_application/_build/CMakeFiles/solver.dir/compiler_depend.internal
+ delete mode 100644 solver_application/_build/CMakeFiles/solver.dir/compiler_depend.make
+ delete mode 100644 solver_application/_build/CMakeFiles/solver.dir/compiler_depend.ts
+ delete mode 100644 solver_application/_build/CMakeFiles/solver.dir/depend.make
+ delete mode 100644 solver_application/_build/CMakeFiles/solver.dir/equation.cpp.o
+ delete mode 100644 solver_application/_build/CMakeFiles/solver.dir/equation.cpp.o.d
+ delete mode 100644 solver_application/_build/CMakeFiles/solver.dir/flags.make
+ delete mode 100644 solver_application/_build/CMakeFiles/solver.dir/link.txt
+ delete mode 100644 solver_application/_build/CMakeFiles/solver.dir/progress.make
+ delete mode 100644 solver_application/_build/Makefile
+ delete mode 100644 solver_application/_build/cmake_install.cmake
+ delete mode 100755 solver_application/_build/solver
+ delete mode 100644 solver_lib/_build/CMakeCache.txt
+ delete mode 100644 solver_lib/_build/CMakeFiles/3.20.1/CMakeCCompiler.cmake
+ delete mode 100644 solver_lib/_build/CMakeFiles/3.20.1/CMakeCXXCompiler.cmake
+ delete mode 100755 solver_lib/_build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_C.bin
+ delete mode 100755 solver_lib/_build/CMakeFiles/3.20.1/CMakeDetermineCompilerABI_CXX.bin
+ delete mode 100644 solver_lib/_build/CMakeFiles/3.20.1/CMakeSystem.cmake
+ delete mode 100644 solver_lib/_build/CMakeFiles/3.20.1/CompilerIdC/CMakeCCompilerId.c
+ delete mode 100755 solver_lib/_build/CMakeFiles/3.20.1/CompilerIdC/a.out
+ delete mode 100644 solver_lib/_build/CMakeFiles/3.20.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
+ delete mode 100755 solver_lib/_build/CMakeFiles/3.20.1/CompilerIdCXX/a.out
+ delete mode 100644 solver_lib/_build/CMakeFiles/CMakeDirectoryInformation.cmake
+ delete mode 100644 solver_lib/_build/CMakeFiles/CMakeOutput.log
+ delete mode 100644 solver_lib/_build/CMakeFiles/Makefile.cmake
+ delete mode 100644 solver_lib/_build/CMakeFiles/Makefile2
+ delete mode 100644 solver_lib/_build/CMakeFiles/TargetDirectories.txt
+ delete mode 100644 solver_lib/_build/CMakeFiles/cmake.check_cache
+ delete mode 100644 solver_lib/_build/CMakeFiles/progress.marks
+ delete mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/DependInfo.cmake
+ delete mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/build.make
+ delete mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/cmake_clean.cmake
+ delete mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/cmake_clean_target.cmake
+ delete mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/compiler_depend.internal
+ delete mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/compiler_depend.make
+ delete mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/compiler_depend.ts
+ delete mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/depend.make
+ delete mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/flags.make
+ delete mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/link.txt
+ delete mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/progress.make
+ delete mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/solver.cpp.o
+ delete mode 100644 solver_lib/_build/CMakeFiles/solver_lib.dir/solver.cpp.o.d
+ delete mode 100644 solver_lib/_build/Makefile
+ delete mode 100644 solver_lib/_build/cmake_install.cmake
+ delete mode 100644 solver_lib/_build/libsolver_lib.a
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git push origin master
+Username for 'https://github.com': Nikita0042
+Password for 'https://Nikita0042@github.com': 
+Перечисление объектов: 13, готово.
+Подсчет объектов: 100% (13/13), готово.
+Сжатие объектов: 100% (7/7), готово.
+Запись объектов: 100% (7/7), 668 bytes | 668.00 KiB/s, готово.
+Всего 7 (изменения 4), повторно использовано 0 (изменения 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/Nikita0042/lab04
+   c17e2fc..e0bf7b2  master -> master
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis sync
+synchronizing:  done
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis lint
+Hooray, .travis.yml looks valid :)
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis sync
+synchronizing: . done
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git commit -a -m"add sources lab02"
+На ветке master
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+	.term.html.swp
+	examples/
+	include/
+	sources/
+	term.html
+
+ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git add .
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git ststus
+git: «ststus» не является командой git. Смотрите «git --help».
+
+Самые похожие команды:
+	status
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git status
+На ветке master
+Изменения, которые будут включены в коммит:
+  (use "git restore --staged <file>..." to unstage)
+	новый файл:    .term.html.swp
+	новый файл:    examples/example1.cpp
+	новый файл:    examples/example2.cpp
+	новый файл:    include/print.hpp
+	новый файл:    sources/hello_world.cpp
+	новый файл:    sources/print.cpp
+	новый файл:    term.html
+
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git rm .html
+fatal: спецификатор пути «.html» не соответствует ни одному файлу
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git rm *.html
+error: следующие файлы содержат проиндексированные изменения в индексе:
+    term.html
+(используйте опцию «--cached» для оставления файла, или «-f» для принудительного удаления)
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git status
+На ветке master
+Изменения, которые будут включены в коммит:
+  (use "git restore --staged <file>..." to unstage)
+	новый файл:    .term.html.swp
+	новый файл:    examples/example1.cpp
+	новый файл:    examples/example2.cpp
+	новый файл:    include/print.hpp
+	новый файл:    sources/hello_world.cpp
+	новый файл:    sources/print.cpp
+	новый файл:    term.html
+
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git commit -a -m"add sources lab02"
+[master 0ca4106] add sources lab02
+ 7 files changed, 2499 insertions(+)
+ create mode 100644 .term.html.swp
+ create mode 100644 examples/example1.cpp
+ create mode 100644 examples/example2.cpp
+ create mode 100644 include/print.hpp
+ create mode 100644 sources/hello_world.cpp
+ create mode 100644 sources/print.cpp
+ create mode 100644 term.html
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git push origin master
+Username for 'https://github.com': Nikita0042
+Password for 'https://Nikita0042@github.com': 
+Перечисление объектов: 13, готово.
+Подсчет объектов: 100% (13/13), готово.
+Сжатие объектов: 100% (11/11), готово.
+Запись объектов: 100% (12/12), 21.63 KiB | 7.21 MiB/s, готово.
+Всего 12 (изменения 1), повторно использовано 0 (изменения 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Nikita0042/lab04
+   e0bf7b2..0ca4106  master -> master
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ gist README.md
+Error: Got Net::HTTPUnauthorized from gist: {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ gist README.md
+Error: Got Net::HTTPUnauthorized from gist: {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ gist README.md
+Error: Got Net::HTTPUnauthorized from gist: {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ gem update gist
+Updating installed gems
+Nothing to update
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ gem install gist
+Successfully installed gist-6.0.0
+Parsing documentation for gist-6.0.0
+Done installing documentation for gist after 0 seconds
+1 gem installed
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ gist README.md
+Error: Got Net::HTTPUnauthorized from gist: {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ ls
+CMakeCache.txt    hello_world_application  REPORT0.md          solver_lib
+CMakeLists.txt    include                  report.html         sources
+examples          LICENSE                  REPORT.md           term.html
+formatter_ex_lib  preview.png              report.txt          test.md
+formatter_lib     README.md                solver_application
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ gist REPORT.md
+Error: Got Net::HTTPUnauthorized from gist: {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git commit -m"modify readme"
+На ветке master
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (use "git restore <file>..." to discard changes in working directory)
+	изменено:      README.md
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git commit -a -m"modify readme"
+[master d34d6c3] modify readme
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ git push origin master
+Username for 'https://github.com': Nikita0042
+Password for 'https://Nikita0042@github.com': 
+Перечисление объектов: 5, готово.
+Подсчет объектов: 100% (5/5), готово.
+Сжатие объектов: 100% (3/3), готово.
+Запись объектов: 100% (3/3), 299 bytes | 299.00 KiB/s, готово.
+Всего 3 (изменения 2), повторно использовано 0 (изменения 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Nikita0042/lab04
+   0ca4106..d34d6c3  master -> master
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis sync
+synchronizing: . done
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis restart
+no build yet for Nikita0042/lab04
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis restart --help
+Restarts a build or job.
+Usage: travis restart [NUMBER] [OPTIONS]
+    -h, --help                       Display help
+    -i, --[no-]interactive           be interactive and colorful
+    -E, --[no-]explode               don't rescue exceptions
+        --skip-version-check         don't check if travis client is up to date
+        --skip-completion-check      don't check if auto-completion is set up
+    -e, --api-endpoint URL           Travis API server to talk to
+    -I, --[no-]insecure              do not verify SSL certificate of API endpoint
+        --pro                        short-cut for --api-endpoint 'https://api.travis-ci.com/'
+        --com                        short-cut for --api-endpoint 'https://api.travis-ci.com/'
+        --org                        short-cut for --api-endpoint 'https://api.travis-ci.org/'
+        --staging                    talks to staging system
+    -t, --token [ACCESS_TOKEN]       access token to use
+        --debug                      show API requests
+        --debug-http                 show HTTP(S) exchange
+    -X, --enterprise [NAME]          use enterprise setup (optionally takes name for multiple setups)
+        --adapter ADAPTER            Faraday adapter to use for HTTP requests. If omitted, use Typhoeus if it is installed, and Net::HTTP otherwise. See https://lostisland.github.io/faraday/adapters/ for more info
+    -r, --repo SLUG                  repository to use (will try to detect from current git clone)
+    -R, --store-repo SLUG            like --repo, but remembers value for current directory
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis restart master
+could not find job or build Nikita0042/lab04#master
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis restart 6
+could not find job or build Nikita0042/lab04#6
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis restart 7
+could not find job or build Nikita0042/lab04#7
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis restart 4
+could not find job or build Nikita0042/lab04#4
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ travis restart 3
+could not find job or build Nikita0042/lab04#3
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
+-- The C compiler identification is GNU 9.3.0
+-- The CXX compiler identification is GNU 9.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/nikita/Nikita0042/workspace/projects/lab04/_build
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ cmake --build _build
+[ 50%] Building CXX object CMakeFiles/print.dir/sources/print.cpp.o
+[100%] Linking CXX static library libprint.a
+[100%] Built target print
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ cmake --build _build --target install
+Consolidate compiler generated dependencies of target print
+[100%] Built target print
+Install the project...
+-- Install configuration: ""
+-- Installing: /home/nikita/Nikita0042/workspace/projects/lab04/_install/lib/libprint.a
+-- Installing: /home/nikita/Nikita0042/workspace/projects/lab04/_install/include
+-- Installing: /home/nikita/Nikita0042/workspace/projects/lab04/_install/include/print.hpp
+-- Installing: /home/nikita/Nikita0042/workspace/projects/lab04/_install/cmake/print-config.cmake
+-- Installing: /home/nikita/Nikita0042/workspace/projects/lab04/_install/cmake/print-config-noconfig.cmake
+nikita@nikita-VirtualBox:~/Nikita0042/workspace/projects/lab04$ 
+
