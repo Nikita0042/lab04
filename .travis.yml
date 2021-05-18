@@ -37,4 +37,4 @@ addons:
     packages:
       - cmake
       - cmake-data
-      #- mingw-w64
+      - mingw-w64
