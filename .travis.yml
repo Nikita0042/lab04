@@ -1,8 +1,5 @@
 language: cpp
 script:
-#- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
-#- cmake --build _build
-#- cmake --build _build --target install
 - cd formatter_lib
 - cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
 - cmake --build _build
@@ -22,14 +19,6 @@ script:
 - cd solver_application
 - cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
 - cmake --build _build
-#- cmake --build _build --target install
-#- cd solver_application
-#- cmake .
-#- make
-#- cd ..
-#- cd hello_world_application
-#- cmake .
-#- make
 addons:
   apt:
     sources:
