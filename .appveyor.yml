@@ -1,0 +1,42 @@
+image: Visual Studio 2015
+
+init:
+    - git config --global core.autocrlf input
+
+clone_folder: c:\projects\my-prj 
+shallow_clone: true     
+
+matrix:
+    fast_finish: false     
+
+platform:
+    - x64
+    - x86
+
+configuration:
+    - Release
+
+environment:
+    matrix:
+        - TOOLCHAIN: msvc14
+
+build_script:
+    - cd ./formatter_lib
+    - cmake -H. -B_build
+    - cmake --build _build
+
+    - cd ../formatter_ex_lib
+    - cmake -H. -B_build
+    - cmake --build _build
+
+    - cd ../solver_lib
+    - cmake -H. -B_build
+    - cmake --build _build
+
+    - cd ../solver_application
+    - cmake -H. -B_build
+    - cmake --build _build
+
+    - cd ../hello_world_application
+    - cmake -H. -B_build
+    - cmake --build _build
