@@ -42,11 +42,3 @@ matrix:
 
 before_install:
   - eval "${MATRIX_EVAL}"
-#addons:
- # apt:
-   # sources:
-     # - george-edison55-precise-backports
-   # packages:
-    #  - cmake
-     # - cmake-data
-    #  - mingw-w64
