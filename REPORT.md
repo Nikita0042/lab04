@@ -5,25 +5,25 @@
 	
 	language: cpp
 	script:
-	- cd formatter_lib
-	- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
-	- cmake --build _build
+	- cd formatter_lib # Переходим в папку форматтер либ 
+	- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install # Задаем 	папку сборки _build и переменную
+	- cmake --build _build # Делает сборку
 	- cd ..
-	- cd formatter_ex_lib
-	- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
-	- cmake --build _build
+	- cd formatter_ex_lib # Переходим в папку форматтер екс либ
+	- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install # Задаем 	папку сборки _build и переменную
+	- cmake --build _build # Делает сборку
 	- cd ..
-	- cd hello_world_application
-	- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
-	- cmake --build _build
+	- cd hello_world_application # Переходим в папку хеллоу ворлд 	апликэйшн
+	- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install # Задаем 	папку сборки _build и переменную
+	- cmake --build _build # Делает сборку
 	- cd ..
-	- cd solver_lib
-	- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
-	- cmake --build _build
+	- cd solver_lib # Переходим в папку солвер либ
+	- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install # Задаем 	папку сборки _build и переменную
+	- cmake --build _build # Делает сборку
 	- cd ..
-	- cd solver_application
-	- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
-	- cmake --build _build
+	- cd solver_application # Переходим в папку солвер апликэйшн
+	- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install # Задаем 	папку сборки _build и переменную
+	- cmake --build _build # Делает сборку
 	matrix:
 	  include:
  	   - os: linux
