@@ -45,8 +45,8 @@
 	      env:
 	        - MATRIX_EVAL="CC=gcc-9 CXX=g++-9" # Указываем версии компиляторов
 
-before_install:
-  - eval "${MATRIX_EVAL}" # compiler: clang было в избытке - его эффекты были отменены уловкой eval "${MATRIX_EVAL}"
+	before_install:
+	  - eval "${MATRIX_EVAL}" # compiler: clang было в избытке - его эффекты были отменены уловкой eval "${MATRIX_EVAL}"
 	      
 ## Статус сборки travis
 
