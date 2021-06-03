@@ -26,27 +26,27 @@
 	- cmake --build _build # Делает сборку
 	matrix:
 	  include:
- 	   - os: linux
-	     addons:
-	        apt:
-	          sources:
-	            - sourceline: 'ppa:ubuntu-toolchain-r/test'
-	          packages:
-	            - clang-8
-	      env:
-	        - MATRIX_EVAL="CC=clang-8 CXX=clang++-8"
-	    - os: linux
+	    - os: linux # Операционная система линукс
 	      addons:
 	        apt:
-	          sources:
+	          sources: # Подгружаем пакеты в трэвис
 	            - sourceline: 'ppa:ubuntu-toolchain-r/test'
 	          packages:
-	            - g++-9
+	            - clang-8 # Добавление пакета
 	      env:
-	        - MATRIX_EVAL="CC=gcc-9 CXX=g++-9"
-	
-	before_install:
-	  - eval "${MATRIX_EVAL}"
+	        - MATRIX_EVAL="CC=clang-8 CXX=clang++-8"
+	    - os: linux # Операционная система линукс
+	      addons:
+	        apt:
+	          sources: # Подгружаем пакеты в трэвис
+	            - sourceline: 'ppa:ubuntu-toolchain-r/test'
+	          packages:
+	            - g++-9 # Добавление пакета
+	      env:
+	        - MATRIX_EVAL="CC=gcc-9 CXX=g++-9" # Указываем версии компиляторов
+
+before_install:
+  - eval "${MATRIX_EVAL}" # compiler: clang было в избытке - его эффекты были отменены уловкой eval "${MATRIX_EVAL}"
 	      
 ## Статус сборки travis
 
